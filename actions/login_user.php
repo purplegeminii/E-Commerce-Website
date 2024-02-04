@@ -4,7 +4,7 @@ session_start();
 include "../settings/connection.php";
 
 // if (isset($_POST['login-button'])) {}
-if ($_SERVER['HTTP_REFERER'] == "http://localhost/cms/login/login.php") {
+if ($_SERVER['HTTP_REFERER'] == "http://localhost/e-commerce-website/login/login.php") {
     $email = mysqli_real_escape_string($conn, $_POST['email-input']);
     $password = mysqli_real_escape_string($conn, $_POST['password-input']);
 
