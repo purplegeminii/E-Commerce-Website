@@ -22,7 +22,7 @@ if ($_SERVER['HTTP_REFERER'] == "http://localhost/cms/login/login.php") {
         // Verify the entered password against the stored hash
         if (password_verify($password, $hashedPasswordFromDatabase)) {
             // Passwords match, login successful
-            header("location: ../view/dashboard.php");
+            header("location: ../view/home.php");
             exit();
         } else {
             // Passwords do not match, login failed
