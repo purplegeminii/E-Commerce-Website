@@ -1,2 +1,4 @@
 # E-Commerce-Website
-A project that displays my prowess in HTML, CSS, JS, PHP, React
+A team project that includes HTML, CSS, JS, PHP
+
+Ashesi University - Web Technologies course
