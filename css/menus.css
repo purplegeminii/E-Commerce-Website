@@ -1,0 +1,215 @@
+.menus-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .menus-header {
+    width: 100%;
+    height: 99px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    background-color: #464E2E;
+  }
+  .menus-text {
+    color: rgb(233, 229, 214);
+    font-size: 50px;
+    align-self: center;
+    font-style: normal;
+    font-family: "Roboto";
+    font-weight: 800;
+    margin-left: var(--dl-space-space-fourunits);
+  }
+  .menus-restaurants {
+    top: 42px;
+    color: #060606;
+    right: 192px;
+    position: absolute;
+    align-self: center;
+    text-align: justify;
+  }
+  .menus-meals {
+    top: 42px;
+    color: #f1ece1;
+    right: 128px;
+    margin: auto;
+    position: absolute;
+    align-self: center;
+    text-align: justify;
+  }
+  .menus-logout {
+    top: 42px;
+    right: 64px;
+    position: absolute;
+    align-self: center;
+    text-align: justify;
+  }
+  .menus-container1 {
+    width: 100%;
+    height: 906px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    justify-content: center;
+    background-image: url("https://images.unsplash.com/photo-1544025162-d76694265947?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDEwM3x8Rk9PRHxlbnwwfHx8fDE3MDc4NjQwNDh8MA&ixlib=rb-4.0.3&w=1500");
+    background-position: center;
+  }
+  .menus-container2 {
+    flex: 0 0 auto;
+    width: 508px;
+    height: 767px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 24px;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #D9D9D9;
+  }
+  .menus-container3 {
+    left: 55px;
+    width: 404px;
+    bottom: 96px;
+    height: 156px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    border-color: var(--dl-color-gray-black);
+    border-width: 0px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .menus-text03 {
+    left: 26px;
+    bottom: 23px;
+    position: absolute;
+  }
+  .menus-container4 {
+    top: 15px;
+    left: 44px;
+    width: 326px;
+    height: 84px;
+    display: flex;
+    position: absolute;
+    background-size:cover;
+    background-image: url('https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDJ8fEJ1cmdlcnxlbnwwfHx8fDE3MDc4NjU5OTd8MA&ixlib=rb-4.0.3&w=400');
+    background-position: center;
+  }
+  .menus-text06 {
+    left: 26px;
+    bottom: 3px;
+    position: absolute;
+  }
+  .menus-button {
+    color: rgb(245, 245, 245);
+    right: 21px;
+    width: 22px;
+    bottom: 9px;
+    height: 30px;
+    position: absolute;
+    border-style: groove;
+    border-width: 0px;
+    border-radius: var(--dl-radius-radius-round);
+    background-color: rgb(70, 78, 46);
+  }
+  .menus-container5 {
+    top: 320px;
+    left: 56px;
+    width: 404px;
+    height: 156px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    border-color: var(--dl-color-gray-black);
+    border-width: 0px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .menus-text07 {
+    left: 26px;
+    bottom: 23px;
+    position: absolute;
+  }
+  .menus-container6 {
+    top: 15px;
+    left: 44px;
+    width: 326px;
+    height: 84px;
+    display: flex;
+    position: absolute;
+    background-size: cover;
+    background-image: url('https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDJ8fEJ1cmdlcnxlbnwwfHx8fDE3MDc4NjU5OTd8MA&ixlib=rb-4.0.3&w=400');
+    background-position: center;
+  }
+  .menus-text10 {
+    left: 26px;
+    bottom: 3px;
+    position: absolute;
+  }
+  .menus-button1 {
+    color: rgb(245, 245, 245);
+    right: 21px;
+    width: 22px;
+    bottom: 9px;
+    height: 30px;
+    position: absolute;
+    border-style: groove;
+    border-width: 0px;
+    border-radius: var(--dl-radius-radius-round);
+    background-color: rgb(70, 78, 46);
+  }
+  .menus-container7 {
+    top: 131px;
+    left: 54px;
+    width: 404px;
+    height: 156px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    border-color: var(--dl-color-gray-black);
+    border-width: 0px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .menus-text11 {
+    left: 26px;
+    bottom: 23px;
+    position: absolute;
+  }
+  .menus-container8 {
+    top: 15px;
+    left: 44px;
+    width: 326px;
+    height: 84px;
+    display: flex;
+    position: absolute;
+    background-size: cover;
+    background-image: url('https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDJ8fEJ1cmdlcnxlbnwwfHx8fDE3MDc4NjU5OTd8MA&ixlib=rb-4.0.3&w=400');
+    background-position: center;
+  }
+  .menus-text14 {
+    left: 26px;
+    bottom: 3px;
+    position: absolute;
+  }
+  .menus-button2 {
+    color: rgb(245, 245, 245);
+    right: 21px;
+    width: 22px;
+    bottom: 9px;
+    height: 30px;
+    position: absolute;
+    border-style: groove;
+    border-width: 0px;
+    border-radius: var(--dl-radius-radius-round);
+    background-color: rgb(70, 78, 46);
+  }
+  .menus-text15 {
+    top: 71px;
+    left: 162px;
+    position: absolute;
+  }
+  
