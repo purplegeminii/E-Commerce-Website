@@ -16,7 +16,7 @@
                 <span>Eats Elite</span>
                 <br />
             </h1>
-            <a href="resturant-listings.html" class="header-restaurants">Restaurants</a>
+            <a href="../restaurantlistings/restaurants.php" class="header-restaurants">Restaurants</a>
             <a href="#" class="header-meals">Meals</a>
             <a href="../login/logout.php" class="header-logout"><span>Logout</span></a>
         </header>

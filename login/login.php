@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>LOGIN</h1>
-    <form action='../actions/login_user_action.php' method='post' name='login-page-form' id='login-form'>
+    <form action='../actions/login_user_action.php' method='POST' name='login-page-form' id='login-form'>
         <input placeholder='Email' type='email' name='email-input' id='email' required />
         <input placeholder='Password' type='password' name='password-input' id='pwd' required />
         <button type='submit' name='login-button' id='login-btn'>SIGN IN</button>

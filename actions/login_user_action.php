@@ -31,12 +31,12 @@ if (isset($_POST['login-button'])) {
 //        } else {
 //            // Passwords do not match, login failed
 //            echo '<script>alert("login failed");</script>';
-//            echo '<script>window.location.href="../login/login_view.php";</script>';
+//            echo '<script>window.location.href="../login/login.php";</script>';
 //        }
 //        exit();
 //    } else {
 //        echo "Email does not exist in the database.";
-//        header("location: ../login/login_view.php");
+//        header("location: ../login/login.php");
 //    }
 
 //    mysqli_stmt_free_result($stmt);
