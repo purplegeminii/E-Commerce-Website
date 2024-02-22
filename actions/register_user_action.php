@@ -31,11 +31,11 @@ if (isset($_POST['sign-up-button'])) {
 
     $hashedPassword = password_hash($password1, PASSWORD_DEFAULT);
 
-    $query = "INSERT INTO Users (fname, lname, gender, email, passwd, address, rid) VALUE (?, ?, ?, ?, ?, ?, ?)";
+    $query = "INSERT INTO Users (fname, lname, gender, dob,  email, passwd, tel, address, rid) VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $create_record = $conn->prepare($query);
     $rid = 3;
-    $create_record->bind_param('ssssssi', $fname, $lname, $gender, $email, $password, $address, $rid);
+    $create_record->bind_param('ssssssssi', $fname, $lname, $gender, $dob, $email, $password1, $phone_num, $address, $rid);
 
     $create_record->execute();
 
