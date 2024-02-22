@@ -13,31 +13,31 @@ SET time_zone = "+00:00";
 --
 CREATE TABLE `Role` (
     `rid` int(11) NOT NULL,
-    `rolename` varchar(50) NOT NULL
-) ENGINE=InnoDB NOT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+    `rolename` varchar(50) NOT NULL,
+    PRIMARY KEY (`rid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table `Role`
---
 INSERT INTO `Role` (`rid`, `rolename`) VALUES
 (1, 'superadmin'),
 (2, 'admin'),
 (3, 'standard');
 
 -- Table structure for table `Users`
---
 CREATE TABLE `Users` (
-  `User_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `fname` varchar(50),
-  `lname` varchar(50),
-  `gender` enum('Male','Female') NOT NULL,`dob` date NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `passwd` varchar(255) NOT NULL,
-  `tel` varchar(20) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `rid` int(11) NOT NULL,
-  PRIMARY KEY (`User_ID`),
-  CONSTRAINT `Users_ibfk_1` FOREIGN KEY (`rid`) REFERENCES `Role` (`rid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB NOT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+    `User_ID` int(11) NOT NULL AUTO_INCREMENT,
+    `fname` varchar(50),
+    `lname` varchar(50),
+    `gender` enum('Male','Female') NOT NULL,
+    `dob` date NOT NULL,
+    `email` varchar(255) NOT NULL,
+    `passwd` varchar(255) NOT NULL,
+    `tel` varchar(20) NOT NULL,
+    `address` varchar(255) NOT NULL,
+    `rid` int(11) NOT NULL,
+    PRIMARY KEY (`User_ID`),
+CONSTRAINT `Users_ibfk_1` FOREIGN KEY (`rid`) REFERENCES `Role` (`rid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Table structure for table Restaurants
 --
@@ -53,7 +53,7 @@ CREATE TABLE `Restaurants` (
   PRIMARY KEY (`Restaurant_ID`),
   KEY `Owner_ID` (`Owner_ID`),
   CONSTRAINT `Restaurants_ibfk_1` FOREIGN KEY (`Owner_ID`) REFERENCES `Users` (`User_ID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB NOT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Table structure for table `Menu_Items`
 --
@@ -68,7 +68,7 @@ CREATE TABLE `Menu_Items` (
   PRIMARY KEY (`Item_ID`),
   KEY `Restaurant_ID` (`Restaurant_ID`),
   CONSTRAINT `Menu_Items_ibfk_1` FOREIGN KEY (`Restaurant_ID`) REFERENCES `Restaurants` (`Restaurant_ID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB NOT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Table structure for table Orders
 --
@@ -87,7 +87,7 @@ CREATE TABLE `Orders` (
   KEY `Restaurant_ID` (`Restaurant_ID`),
   CONSTRAINT `Orders_ibfk_1` FOREIGN KEY (`Customer_ID`) REFERENCES `Users` (`User_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `Orders_ibfk_2` FOREIGN KEY (`Restaurant_ID`) REFERENCES `Restaurants` (`Restaurant_ID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB NOT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Table structure for table Order_Items
 --
@@ -102,7 +102,7 @@ CREATE TABLE `Order_Items` (
   KEY `Item_ID` (`Item_ID`),
   CONSTRAINT `Order_Items_ibfk_1` FOREIGN KEY (`Order_ID`) REFERENCES `Orders` (`Order_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `Order_Items_ibfk_2` FOREIGN KEY (`Item_ID`) REFERENCES `Menu_Items` (`Item_ID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB NOT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Table structure for table Reviews
 --
@@ -115,7 +115,7 @@ CREATE TABLE `Reviews` (
   PRIMARY KEY (`Review_ID`),
   KEY `Order_ID` (`Order_ID`),
   CONSTRAINT `Reviews_ibfk_1` FOREIGN KEY (`Order_ID`) REFERENCES `Orders` (`Order_ID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB NOT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Table structure for table Delivery_Personnel
 --
@@ -127,7 +127,7 @@ CREATE TABLE `Delivery_Personnel` (
   `Availability` tinyint(1) NOT NULL,
   `Assigned_Orders` text,
   PRIMARY KEY (`DeliveryPerson_ID`)
-) ENGINE=InnoDB NOT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Table structure for table Payments
 --
@@ -141,36 +141,7 @@ CREATE TABLE `Payments` (
   PRIMARY KEY (`Payment_ID`),
   KEY `Order_ID` (`Order_ID`),
   CONSTRAINT `Payments_ibfk_1` FOREIGN KEY (`Order_ID`) REFERENCES `Orders` (`Order_ID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB NOT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `Role`
---
-ALTER TABLE `Role`
-    ADD PRIMARY KEY (`rid`);
-
---
--- Indexes for table `Users`
---
-ALTER TABLE `Users`
-    ADD KEY 'rid' (`rid`);
-
---
--- Indexes for table `Order_Items`
---
-ALTER TABLE `Order_Items`
-  ADD PRIMARY KEY (`Order_Item_ID`),
-  ADD KEY `Order_ID` (`Order_ID`),
-  ADD KEY `Item_ID` (`Item_ID`);
-
--- Indexes for table `Payments`
-ALTER TABLE `Payments`
-  ADD PRIMARY KEY (`Payment_ID`),
-  ADD KEY `Order_ID` (`Order_ID`);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- AUTO_INCREMENT for table `Role`
