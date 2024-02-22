@@ -8,7 +8,7 @@ if (isset($_POST['login-button'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email-input']);
     $password = mysqli_real_escape_string($conn, $_POST['password-input']);
 
-    $query = "SELECT COUNT(*) AS email_count, User_ID, rid, passwd FROM users WHERE email = ?";
+    $query = "SELECT COUNT(*) AS email_count, User_ID, rid, passwd FROM Users WHERE email = ?";
     $stmt = $conn->prepare($query);
     $stmt->bind_param("s", $email);
     $stmt->execute();
