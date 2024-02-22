@@ -42,11 +42,11 @@ if (isset($_POST['sign-up-button'])) {
 
     if ($create_record->affected_rows > 0) {
         echo '<script>alert("register successful")</script>';
-        echo '<script>window.location.href="../login/login_view.php";</script>';
+        echo '<script>window.location.href="../login/login.php";</script>';
         exit();
     } else {
         echo '<script>alert("Couldn\'t register. An error occurred.")</script>';
-        echo '<script>window.location.href="../login/register_view.php";</script>';
+        echo '<script>window.location.href="../login/register.php";</script>';
     }
 
     $create_record->close();

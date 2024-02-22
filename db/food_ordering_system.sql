@@ -36,7 +36,7 @@ CREATE TABLE `Users` (
     `address` varchar(255) NOT NULL,
     `rid` int(11) NOT NULL,
     PRIMARY KEY (`User_ID`),
-CONSTRAINT `Users_ibfk_1` FOREIGN KEY (`rid`) REFERENCES `Role` (`rid`) ON DELETE CASCADE ON UPDATE CASCADE
+    CONSTRAINT `Users_ibfk_1` FOREIGN KEY (`rid`) REFERENCES `Role` (`rid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Table structure for table Restaurants
