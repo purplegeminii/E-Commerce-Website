@@ -20,12 +20,14 @@ session_start();
     <input placeholder='Last Name' type='text' name='last-name-input' id='lname' required />
 
     <label for='male'>Male</label>
-    <input type='radio' name='gender' id='male' value='0' />
+    <input type='radio' name='gender' id='male' value='Male' />
     <label for='female'>Female</label>
-    <input type='radio' name='gender' id='female' value='1' /><br><br>
+    <input type='radio' name='gender' id='female' value='Female' /><br><br>
 
     <label for='dob'>Date of Birth</label>
     <input placeholder='Date of Birth' type='date' name='date-of-birth' id='dob' required />
+
+    <input placeholder='Address' type='text' name='address' id='address' required />
 
     <label for='tel'></label>
     <input placeholder='+233-XX-XXX-XXXX' type='tel' name='phone-number' id='tel' pattern='+233-[0-9]{2}-[0-9]{3}-[0-9]{4}' required/>

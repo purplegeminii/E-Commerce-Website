@@ -3,7 +3,7 @@
 $SERVER = "localhost";
 $USERNAME = "root";
 $PASSWD = "";
-$DATABASE = "";
+$DATABASE = "food_db";
 
 $conn = new mysqli($SERVER, $USERNAME, $PASSWD, $DATABASE) or die ("could not connect database");
 
