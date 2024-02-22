@@ -27,6 +27,8 @@ session_start();
     <label for='dob'>Date of Birth</label>
     <input placeholder='Date of Birth' type='date' name='date-of-birth' id='dob' required />
 
+    <input placeholder='Address' type='text' name='address' id='address' required />
+
     <label for='tel'></label>
     <input placeholder='+233-XX-XXX-XXXX' type='tel' name='phone-number' id='tel' pattern='+233-[0-9]{2}-[0-9]{3}-[0-9]{4}' required/>
 

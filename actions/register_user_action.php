@@ -5,8 +5,6 @@ include "../settings/connection.php";
 global $conn;
 
 if (isset($_POST['sign-up-button'])) {
-//$_SERVER['HTTP_REFERER'] == "http://localhost/cms/login/register_view.php"
-//if ($_SERVER['HTTP_REFERER'] == "localhost/cms/login/register_view.php") {
 
     $fname = mysqli_real_escape_string($conn, $_POST['first-name-input']);
 
@@ -14,9 +12,9 @@ if (isset($_POST['sign-up-button'])) {
 
     $gender = mysqli_real_escape_string($conn, $_POST['gender']);
 
-//    $fid = mysqli_real_escape_string($conn, $_POST['family-role']);
-
     $dob = mysqli_real_escape_string($conn, $_POST['date-of-birth']);
+
+    $address = mysqli_real_escape_string($conn, $_POST['address']);
 
     $phone_num = mysqli_real_escape_string($conn, $_POST['phone-number']);
 
@@ -27,13 +25,13 @@ if (isset($_POST['sign-up-button'])) {
 
     if ($password1 != $password2) {
         echo '<script>alert("passwords do not match");</script>';
-        echo '<script>window.location.href="../login/register_view.php";</script>';
+        echo '<script>window.location.href="../login/register.php";</script>';
         exit();
     }
 
     $hashedPassword = password_hash($password1, PASSWORD_DEFAULT);
 
-    $query = "INSERT INTO People (rid, fid, fname, lname, gender, dob, tel, email, passwd) VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $query = "INSERT INTO Users (FName, LName, Gender, ) VALUE (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $create_record = $conn->prepare($query);
     $rid = 3;

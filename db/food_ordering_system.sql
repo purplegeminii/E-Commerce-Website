@@ -27,14 +27,16 @@ INSERT INTO `Role` (`rid`, `rolename`) VALUES
 --
 CREATE TABLE `Users` (
   `User_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `Username` varchar(255) NOT NULL,
-  `Email` varchar(255) NOT NULL,
-  `Password` varchar(255) NOT NULL,
-  `Phone_Number` varchar(20) NOT NULL,
-  `Address` varchar(255) NOT NULL,
-  `Role_ID` int(11) NOT NULL,
+  `fname` varchar(50),
+  `lname` varchar(50),
+  `gender` enum('Male','Female') NOT NULL,`dob` date NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `passwd` varchar(255) NOT NULL,
+  `tel` varchar(20) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `rid` int(11) NOT NULL,
   PRIMARY KEY (`User_ID`),
-  CONSTRAINT `Users_ibfk_1` FOREIGN KEY (`Role_ID`) REFERENCES `Role` (`rid`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `Users_ibfk_1` FOREIGN KEY (`rid`) REFERENCES `Role` (`rid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB NOT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Table structure for table Restaurants
@@ -150,6 +152,12 @@ CREATE TABLE `Payments` (
 --
 ALTER TABLE `Role`
     ADD PRIMARY KEY (`rid`);
+
+--
+-- Indexes for table `Users`
+--
+ALTER TABLE `Users`
+    ADD KEY 'rid' (`rid`);
 
 --
 -- Indexes for table `Order_Items`
