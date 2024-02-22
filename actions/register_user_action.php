@@ -35,7 +35,7 @@ if (isset($_POST['sign-up-button'])) {
 
     $create_record = $conn->prepare($query);
     $rid = 3;
-    $create_record->bind_param('ssssssssi', $fname, $lname, $gender, $dob, $email, $password1, $phone_num, $address, $rid);
+    $create_record->bind_param('ssssssssi', $fname, $lname, $gender, $dob, $email, $hashedPassword, $phone_num, $address, $rid);
 
     $create_record->execute();
 
