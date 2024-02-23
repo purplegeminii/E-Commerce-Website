@@ -21,9 +21,9 @@
               <span>Eats Elite</span>
               <br />
             </h1>
-            <span class="menus-restaurants">Restaurants</span>
-            <span class="menus-meals">Meals</span>
-            <span class="menus-logout">Logout</span>
+              <a href="../restaurant-listings/restaurants.php" class="menus-restaurants">Restaurants</a>
+              <a href="#" class="menus-meals">Meals</a>
+              <a href="../login/logout.php" class="menus-logout"><span>Logout</span></a>
           </header>
           <div class="menus-container1">
             <div class="menus-container2">
