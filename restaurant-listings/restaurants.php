@@ -26,11 +26,12 @@
                     <h1 class="restaurant-listings-text">Pick Your Take-Out Restaurant</h1>
                     <div class="restaurant-listings-container03">
                         <div class="restaurant-listings-container04">
-                            <button type="button" disabled="false" class="restaurant-listings-button button">
+                            <button type="button" class="restaurant-listings-button button" onclick="goToMenu()">
                                 Order Here
                             </button>
                             <img src="../assets/external/image_2024-02-13_213104728.png" alt="image" class="restaurant-listings-image" />
                         </div>
+
                         <div class="restaurant-listings-container05">
                             <button type="button" disabled="true" class="restaurant-listings-button1 button">
                                 Order Here
@@ -69,5 +70,6 @@
         </div>
         
     </div>
+    <script type="text/javascript" src="../js/restaurant-listings.js"></script>
 </body>
 </html>
