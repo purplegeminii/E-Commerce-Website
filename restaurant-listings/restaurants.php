@@ -1,3 +1,7 @@
+<?php
+include "../settings/core.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
