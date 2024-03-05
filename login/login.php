@@ -7,23 +7,23 @@
     <link rel='stylesheet' href='../css/login.css'>
 </head>
 <body>
-<div class="top-banner">
+    <div class="top-banner">
         <p>Eats Elite</p>
     </div>
     <div class="login-container">
         <h2>Login</h2>
         <hr>
-        <form id="loginForm" name="loginForm" onsubmit="validateForm(); return false;" action="../actions/login_user_action.php" method="POST">
+        <form id="loginForm" name="loginForm" action="../actions/login_user_action.php" method="POST">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
-            <label for="remember">Remember Password:</label>
-            <input type="checkbox" id="remember" name="remember">
+<!--            <label for="remember">Remember Password:</label>-->
+<!--            <input type="checkbox" id="remember" name="remember">-->
 
-            <button type="submit" name="submit" id="button">Login</button>
+            <button type="submit" name="login-button" id="login-btn">Login</button>
         </form>
         <p id="error-message"></p>
 <!--        <p class="forgot-password"><a href="#" onclick="forgotPassword()">Forgot Password?</a></p>-->
