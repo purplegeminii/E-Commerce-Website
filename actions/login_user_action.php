@@ -5,8 +5,8 @@ include "../settings/connection.php";
 global $conn;
 
 if (isset($_POST['login-button'])) {
-    $email = mysqli_real_escape_string($conn, $_POST['email-input']);
-    $password = mysqli_real_escape_string($conn, $_POST['password-input']);
+    $email = mysqli_real_escape_string($conn, $_POST['username']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
 
     $query = "SELECT COUNT(*) AS email_count, User_ID, rid, passwd FROM Users WHERE email = ?";
     $stmt = $conn->prepare($query);
