@@ -15,10 +15,10 @@ function forgotPassword() {
         alert('Password recovery initiated for ' + username + '. Check your email for instructions.');
     }
 }
-const emailfield = document.getElementById("username")
+const emailfield = document.getElementById("username");
 const emailRegex=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const button= document.getElementById("button")
-const passwordfield = document.getElementById("password")
+const button= document.getElementById("button");
+const passwordfield = document.getElementById("password");
 const passwordRegex= /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&?_"]).{8,}$/;
 
 button.addEventListener("click", function(e) {
