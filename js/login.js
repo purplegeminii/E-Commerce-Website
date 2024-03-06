@@ -6,6 +6,7 @@ const passwordfield = document.getElementById("password");
 
 const loginButton= document.getElementById("login-btn");
 const errMsg= document.getElementById("error-message");
+const form = document.forms['loginForm'];
 
 loginButton.addEventListener("click", function(e) {
     e.preventDefault();
@@ -24,5 +25,6 @@ loginButton.addEventListener("click", function(e) {
     } else {
         emailfield.style.borderColor= "green";
         passwordfield.style.borderColor="green";
+        form.submit();
     }
 })
