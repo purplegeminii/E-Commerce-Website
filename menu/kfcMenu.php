@@ -249,7 +249,7 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="kfcMenu.js"></script>
+    <script src="../js/kfcMenu.js"></script>
 </body>
 
 </html>
