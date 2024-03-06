@@ -9,7 +9,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Hammersmith One' rel='stylesheet'>
     <link rel="stylesheet" href="https://fontawesome.com/v5/icons/quote-left?f=classic&s=solid">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="css/home.css">
     <title>Homepage</title>
 </head>
 <body>
