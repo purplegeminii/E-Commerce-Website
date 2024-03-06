@@ -3,10 +3,9 @@
 session_start();
 include "../settings/connection.php";
 global $conn;
-echo "Connection established";
 
-if (isset($_POST['login-button'])) {
-    echo "Login";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo '<script>alert("button");</script>';
     $email = mysqli_real_escape_string($conn, $_POST['username']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
 
@@ -14,17 +13,15 @@ if (isset($_POST['login-button'])) {
     $stmt = $conn->prepare($query);
     $stmt->bind_param("s", $email);
     $stmt->execute();
-$result = $stmt->get_result();~
+    $result = $stmt->get_result();
     $row = $result->fetch_assoc();
 
     $emailCount = $row['email_count'];
     $hashedPasswordFromDatabase = $row['passwd'];
 
     if ($emailCount > 0) {
-        echo "Email Count: " . $emailCount;
         // Verify the entered password against the stored hash
         if (password_verify($password, $hashedPasswordFromDatabase)) {
-            echo " Password verified";
             // Passwords match, login successful, set user_id & role_id
             $_SESSION['user_id'] = $row['User_ID'];
             $_SESSION['role_id'] = $row['rid'];

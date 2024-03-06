@@ -6,7 +6,10 @@ const passwordfield = document.getElementById("password");
 
 const loginButton= document.getElementById("login-btn");
 const errMsg= document.getElementById("error-message");
-const form = document.forms['loginForm'];
+
+const form = document.getElementById('loginForm');
+const formData = new FormData(form);
+
 
 loginButton.addEventListener("click", function(e) {
     e.preventDefault();
@@ -25,6 +28,20 @@ loginButton.addEventListener("click", function(e) {
     } else {
         emailfield.style.borderColor= "green";
         passwordfield.style.borderColor="green";
-        form.submit();
+
+        // fetch api
+        fetch('../actions/login_user_action.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json()) // assuming the response is JSON
+        .then(data => {
+            console.log('Success:', data);
+            // Handle the response data as needed
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Handle errors
+        });
     }
 })
