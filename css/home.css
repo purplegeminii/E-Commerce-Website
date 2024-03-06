@@ -299,7 +299,7 @@ nav .signup{
 
 
 .hero-section{
-    background-image: url("Website food/images/hero-section.webp") ; 
+    background-image: url("../assets/images/hero-section.webp") ; 
     background-size: cover;
     height: 100vh;
     display:flex ;
@@ -356,7 +356,7 @@ nav .signup{
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("Website Food/images/review-background.jpeg");
+    background-image: url("../assets/images/review-background.jpeg");
     background-size: cover;
     height: 100vh;
     padding: 30px;
@@ -390,7 +390,7 @@ nav .signup{
     padding: 50px;
 }
 #contact-us-container{
-    background-image: url("Website Food/images/contact-info-pic.jpg");
+    background-image: url("../assets/images/contact-info-pic.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 80vh;
