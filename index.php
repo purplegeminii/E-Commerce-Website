@@ -26,7 +26,7 @@
                     <li><a href="#about-us">ABOUT US</a></li>
                     <li><a href="#reviews">OUR CUSTOMERS</a></li>
                     <li><a href="#contact-us">CONTACT US</a></li>
-                    <li><a class="signup" href="../login/register.php">SIGN UP</a></li>
+                    <li><a class="signup" href="login/register.php">SIGN UP</a></li>
                 </ul>      
         </div>
     </nav>
