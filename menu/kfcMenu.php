@@ -13,7 +13,7 @@
         <h1>KFC Menu</h1>
         <div class="line"></div>
     </div>
-    <div class="menu-container">
+    <div id="main" class="menu-container">
         <div class="category-buttons">
             <button class="category-button" data-category="meals">Meals</button>
             <button class="category-button" data-category="burgers">Burgers</button>

@@ -10,7 +10,7 @@ include "../settings/core.php";
     
     
     <!--------------CSS -------------->
-    <link href="../css/menus.css" rel="stylesheet" />
+    <link href="css/menus.css" rel="stylesheet" />
     
 
     <title>Menu Page</title>
@@ -25,9 +25,9 @@ include "../settings/core.php";
               <span>Eats Elite</span>
               <br />
             </h1>
-              <a href="../restaurant-listings/restaurants.php" class="menus-restaurants">Restaurants</a>
+              <a href="restaurant-listings/restaurants.php" class="menus-restaurants">Restaurants</a>
               <a href="#" class="menus-meals">Meals</a>
-              <a href="../login/logout.php" class="menus-logout"><span>Logout</span></a>
+              <a href="login/logout.php" class="menus-logout"><span>Logout</span></a>
           </header>
           <div class="menus-container1">
             <div class="menus-container2">
