@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KFC Menu</title>
-    <link rel="stylesheet" href="kfcMenu.css">
+    <link rel="stylesheet" href="../css/kfcMenu.css">
 </head>
 
 <body>

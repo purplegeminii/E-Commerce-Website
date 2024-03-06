@@ -30,7 +30,7 @@ include "../settings/core.php";
                     <h1 class="restaurant-listings-text">Pick Your Take-Out Restaurant</h1>
                     <div class="restaurant-listings-container03">
                         <div class="restaurant-listings-container04">
-                            <button type="button" class="restaurant-listings-button button" onclick="goToMenu()">
+                            <button type="button" class="restaurant-listings-button button" onclick="goToMenu(1)">
                                 Order Here
                             </button>
                             <img src="../assets/external/image_2024-02-13_213104728.png" alt="image" class="restaurant-listings-image" />
