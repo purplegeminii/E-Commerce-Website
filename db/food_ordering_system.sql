@@ -39,6 +39,10 @@ CREATE TABLE `Users` (
     CONSTRAINT `Users_ibfk_1` FOREIGN KEY (`rid`) REFERENCES `Role` (`rid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- Dumping data for table `Users`
+INSERT INTO `Users` (fname, lname, gender, dob, email, passwd, tel, address, rid)
+VALUES ('John', 'Mensah', 'Male', '')
+
 -- Table structure for table Restaurants
 --
 CREATE TABLE `Restaurants` (
@@ -54,6 +58,9 @@ CREATE TABLE `Restaurants` (
   KEY `Owner_ID` (`Owner_ID`),
   CONSTRAINT `Restaurants_ibfk_1` FOREIGN KEY (`Owner_ID`) REFERENCES `Users` (`User_ID`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `Restaurants` (Name, Address, Phone_Number, Owner_ID, Cuisine_Type, Delivery_Area, Opening_Hours)
+VALUES ('KFC', '123 Main Street', '+233-55-900-2794', '1', 'Fast Food', 'Berekuso', '8am to 11pm');
 
 -- Table structure for table `Menu_Items`
 --
