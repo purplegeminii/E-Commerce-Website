@@ -18,7 +18,7 @@
         <div class="header-container">
            <div class="logo">
                 <!-- Logo goes here -->
-                <a href="index.html"><img height="auto" width="60px" src="../assets/images/logo-transformed.png" alt="logo"></a>
+                <a href="index.php"><img height="auto" width="60px" src="assets/images/logo-transformed.png" alt="logo"></a>
            </div> 
             
                 <ul id="menu">
@@ -66,8 +66,8 @@
 
     <section class="about-us" id="about-us">
         <div id="about-pictures">
-            <img id="about-picture1" src="../assets/images/about-pic1.jpg" alt="picture of jollof">
-            <img id="about-picture2" src="../assets/images/about-pic2.jpg" alt="picture of boiled yam">
+            <img id="about-picture1" src="assets/images/about-pic1.jpg" alt="picture of jollof">
+            <img id="about-picture2" src="assets/images/about-pic2.jpg" alt="picture of boiled yam">
 
         </div>
         <div id="about-text">
@@ -119,13 +119,13 @@
         <div id="contact-us-container">
             <div id="container-2">
                 <div id="contact-images" >
-                    <img id="contact-logo" src="../assets/images/Eats Elite Logo.png" alt="company logo"><br>
+                    <img id="contact-logo" src="assets/images/Eats Elite Logo.png" alt="company logo"><br>
                     <div class="social-logos">
                         <img width="24" height="24" 
-                        src="../assets/images/facebook--lgg.png" alt="facebook-new"/>
-                        <img width="24" height="24" src="../assets/images/instagram--lg.png" alt="instagram-new--v1"/>                       
+                        src="assets/images/facebook--lgg.png" alt="facebook-new"/>
+                        <img width="24" height="24" src="assets/images/instagram--lg.png" alt="instagram-new--v1"/>
                         <img width="24" height="24" 
-                        src="../assets/images/x--lg.png" alt="twitterx"/>
+                        src="assets/images/x--lg.png" alt="twitterx"/>
                     </div>
                 </div>
     
@@ -148,7 +148,7 @@
         </div>
     </section>
 </body>
-<script src="../js/homepage-script.js">
+<script src="js/homepage-script.js">
 
 </script>
 </html>
