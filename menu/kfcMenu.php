@@ -41,7 +41,6 @@ mysqli_close($conn);
                 </div>
             </div>
             <?php endforeach; ?>
-
         </div>
     </div>
 
