@@ -1,11 +1,3 @@
-<?php
-//include "../settings/core.php";
-include "../actions/get_all_menu_items.php";
-include "../actions/get_all_categories.php";
-$menu = get_all_menu_items(1);
-$categories = get_all_categories(1);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,9 +22,6 @@ $categories = get_all_categories(1);
         <button class="category-button" data-category="streetwise">Streetwise</button>
         <button class="category-button" data-category="chicken-pieces-buckets">Chicken Pieces Buckets</button>
         <button class="category-button" data-category="sides">Sides</button>
-<!--        --><?php //foreach ($categories as $category): ?>
-<!--            <button class="category-button" data-category="--><?php //echo $category['name'];?><!--">--><?php //echo $category['name'];?><!--</button>-->
-<!--        --><?php //endforeach; ?>
     </div>
 
 
