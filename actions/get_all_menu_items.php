@@ -4,9 +4,10 @@ include "../settings/connection.php";
 
 function get_all_menu_items($rest_id): array {
     global $conn;
-    $sql = "SELECT * FROM Menu_Items WHERE Restaurant_ID = ?";
+    $availability = 1;
+    $sql = "SELECT * FROM Menu_Items WHERE Restaurant_ID = ? AND Availability = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $rest_id);
+    $stmt->bind_param("ii", $rest_id, $availability);
     $stmt->execute();
     $result = $stmt->get_result();
     $rows=[];
