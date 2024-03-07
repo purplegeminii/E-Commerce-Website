@@ -41,7 +41,7 @@ CREATE TABLE `Users` (
 
 -- Dumping data for table `Users`
 INSERT INTO `Users` (fname, lname, gender, dob, email, passwd, tel, address, rid)
-VALUES ('John', 'Mensah', 'Male', '')
+VALUES ('John', 'Mensah', 'Male', '1970-08-20', 'kfcadmin126@gmail.com', '$2y$10$6fnTRb.sjgJr8QB/bwRK2.jdRnpzx4n6wRZBBnMgTbDjGkjTeDily', '+233-59-444-4444', 'Accra', 2);
 
 -- Table structure for table Restaurants
 --
