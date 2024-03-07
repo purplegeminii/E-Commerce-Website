@@ -1,8 +1,11 @@
 <?php
+global $conn;
+include "../settings/core.php";
 include "../actions/get_all_menu_items.php";
 include "../actions/get_all_categories.php";
 $menu = get_all_menu_items(1);
 $categories = get_all_categories(1);
+mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>

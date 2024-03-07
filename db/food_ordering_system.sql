@@ -91,7 +91,7 @@ VALUES
     (1, 'BURGER MEAL - ZINGER', NULL, 7.00, 'meals', 1, 'https://cdn.tictuk.com/2df0b3fc-3555-d893-fd12-dedb0d869bf1/3ad6bb04-a5e6-6568-2997-fcb5319e3d83.jpeg?a=26c629e1-3672-736f-4cae-466483113b0c'),
     (1, 'BOX MASTER ZINGER', NULL, 8.00, 'meals', 1, 'https://cdn.tictuk.com/2df0b3fc-3555-d893-fd12-dedb0d869bf1/2e5f0fb9-87b2-288e-32b7-8959e7034321.jpeg?a=83412a80-0137-c06a-43e5-c2c88dc1d3c4'),
     (1, 'TWISTER MEAL - ZINGER', NULL, 8.00, 'meals', 1, 'https://cdn.tictuk.com/82a4add3-65fc-52b9-9408-0726b13919cb/28dd573b-f5ce-877d-2c06-3041d5a803a3.jpeg?a=799af0c6-b4cb-d8b2-c88b-aa26d5067b66'),
-    (1, 'FAMILY TREAT', NULL, 12.00, 'meals', 1, 'https://cdn.tictuk.com/2df0b3fc-3555-d893-fd12-dedb0d869bf1/28dd573b-f5ce-877d-2c06-3041d5a803a3.jpeg?a=799af0c6-b4cb-d8b2-c88b-aa26d5067b66'),
+    (1, 'FAMILY TREAT', NULL, 12.00, 'meals', 1, 'https://cdn.tictuk.com/2df0b3fc-3555-d893-fd12-dedb0d869bf1/3ad6bb04-a5e6-6568-2997-fcb5319e3d83.jpeg?a=26c629e1-3672-736f-4cae-466483113b0c'),
     (1, 'REGULAR OREO KRUSHER', NULL, 5.00, 'desserts', 1, 'https://cdn.tictuk.com/2df0b3fc-3555-d893-fd12-dedb0d869bf1/21c76f04-2697-4296-e7c8-52c918ba9f7c.jpeg?a=c59aca31-7653-a168-3e7a-cfa3afbaad19'),
     (1, 'REGULAR BERRY KRUSHERS', NULL, 4.25, 'desserts', 1, 'https://cdn.tictuk.com/2df0b3fc-3555-d893-fd12-dedb0d869bf1/21c76f04-2697-4296-e7c8-52c918ba9f7c.jpeg?a=c59aca31-7653-a168-3e7a-cfa3afbaad19'),
     (1, 'STREETWISE 5', NULL, 30.00, 'streetwise', 1, 'https://cdn.tictuk.com/staging/fc9ab8a5-b3d3-4cf6-0e30-555e691086bf/5b9d5be1-481c-5a4c-40d9-6aa4bfc27c58.jpeg?a=6389423d-c937-d721-fb5f-500fe19c4390'),
@@ -104,7 +104,7 @@ VALUES
     (1, 'EXTRA HASH BROWN', NULL, 5.00, 'sides', 1, 'https://cdn.tictuk.com/82a4add3-65fc-52b9-9408-0726b13919cb/ada462d4-5b3f-95ae-9a41-bf78289118ec.jpeg?a=283b0e6e-274d-e8a3-ff97-642fe3270dc2'),
     (1, 'LARGE CHIPS', NULL, 2.00, 'sides', 1, 'https://cdn.tictuk.com/82a4add3-65fc-52b9-9408-0726b13919cb/1756be6c-3923-7fb0-307f-5325393c39de.jpeg?a=b36ae5a3-38c2-20c2-9a11-de2ccb94f010'),
     (1, 'ZINGER DRIP SAUCE', NULL, 3.00, 'sides', 1, 'https://cdn.tictuk.com/staging/fc9ab8a5-b3d3-4cf6-0e30-555e691086bf/0b211eb9-37c1-295e-1d3c-038828392bc9.jpeg?a=91ea4ae1-262f-d342-6fe3-74a0639c16df'),
-    (1, 'STRAWBERRY MILKSHAKE', NULL, 4.00, 'desserts', 1, 'https://cdn.tictuk.com/82a4add3-65fc-52b9-9408-0726b13919cb/97fd9cfd-0cfb-d1a7-e7e7-78a227f8d5db.jpeg?a=8fc54dc0-191d-7683-fdbe-0ebcb70d188c');
+    (1, 'STRAWBERRY MILKSHAKE', NULL, 4.00, 'desserts', 1, 'https://cdn.tictuk.com/2df0b3fc-3555-d893-fd12-dedb0d869bf1/2e5f0fb9-87b2-288e-32b7-8959e7034321.jpeg?a=83412a80-0137-c06a-43e5-c2c88dc1d3c4');
 
 
 -- Table structure for table Orders
