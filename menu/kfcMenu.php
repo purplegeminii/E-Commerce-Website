@@ -37,7 +37,7 @@ mysqli_close($conn);
                 <div class="menu-item-details">
                     <h2 class="menu-item-name"><?= $item['Name']?></h2>
                     <p class="menu-item-price">$<?= $item['Price']?></p>
-                    <button class="add-to-cart-button"><a href="../view/cart_page.php?id=<?= $item['Item_ID'] ?>">Add to Cart</a></button>
+                    <a href="../view/cart_page.php?id=<?= $item['Item_ID'] ?>"><button class="add-to-cart-button">Add to Cart</button></a>
                 </div>
             </div>
             <?php endforeach; ?>
