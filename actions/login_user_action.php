@@ -18,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $row = $result->fetch_assoc();
 
     $emailCount = $row['email_count'];
-    $hashedPasswordFromDatabase = $row['passwd'];
 
     mysqli_stmt_free_result($stmt);
 
@@ -29,6 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
         $result = $stmt->get_result();
         $row = $result->fetch_assoc();
+
+        $hashedPasswordFromDatabase = $row['passwd'];
 
         // Verify the entered password against the stored hash
         if (password_verify($password, $hashedPasswordFromDatabase)) {
