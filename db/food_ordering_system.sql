@@ -190,7 +190,8 @@ ALTER TABLE `Role`
 -- AUTO_INCREMENT for table `Order_Items`
 --
 ALTER TABLE `Order_Items`
-  MODIFY `Order_Item_ID` int(11) NOT NULL AUTO_INCREMENT;
+    MODIFY `Order_Item_ID` int(11) NOT NULL AUTO_INCREMENT,
+    MODIFY `Subtotal` decimal(10,2) GENERATED ALWAYS AS (`Quantity` * (SELECT Price FROM `Menu_Items` WHERE `Item_ID` = `Order_Items`.`Item_ID`)) STORED;
 
 --
 -- AUTO_INCREMENT for table `Payments`
