@@ -53,7 +53,11 @@ if (!isset($_SESSION['isNewOrder'])) {
             $order_id = $row['Order_ID'];
             $_SESSION['order_id'] = $order_id;
 
+            $result3 = add_to_cart($order_id, $item_id);
 
+            if ($result3) {
+                echo "<script src='../js/restaurant-listings.js'>goToMenu($rest_id)</script>";
+            }
         }
     }
 
