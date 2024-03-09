@@ -6,6 +6,7 @@ include "../actions/get_all_categories.php";
 $menu = get_all_menu_items(1);
 $categories = get_all_categories(1);
 mysqli_close($conn);
+$_SESSION['rest_id'] = 1;
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +38,7 @@ mysqli_close($conn);
                 <div class="menu-item-details">
                     <h2 class="menu-item-name"><?= $item['Name']?></h2>
                     <p class="menu-item-price">$<?= $item['Price']?></p>
-                    <a href="../view/cart_page.php?id=<?= $item['Item_ID'] ?>"><button class="add-to-cart-button">Add to Cart</button></a>
+                    <a href="../actions/add_to_cart_action.php?item_id=<?= $item['Item_ID'] ?>"><button class="add-to-cart-button">Add to Cart</button></a>
                 </div>
             </div>
             <?php endforeach; ?>
