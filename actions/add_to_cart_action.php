@@ -30,14 +30,14 @@ function get_order_by_id($cust_id): false|mysqli_result {
     return $stmt->get_result();
 }
 
-function add_to_cart($order_id, $item_id): false|mysqli_result {
+function add_to_cart($order_id, $item_id): false|mysqli_stmt {
     global $conn;
     $sql = "INSERT INTO Order_Items (Order_ID, Item_ID, Quantity) 
             VALUES (?,?,DEFAULT)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ii", $order_id,$item_id);
     $stmt->execute();
-    return $stmt->get_result();
+    return $stmt;
 }
 
 if (!isset($_SESSION['isNewOrder'])) {
@@ -55,7 +55,8 @@ if (!isset($_SESSION['isNewOrder'])) {
 
             $result3 = add_to_cart($order_id, $item_id);
 
-            if ($result3) {
+            if ($result3->affected_rows > 0) {
+                echo "<script>alert('added to cart');</script>";
                 echo "<script src='../js/restaurant-listings.js'>goToMenu($rest_id)</script>";
             }
         }
