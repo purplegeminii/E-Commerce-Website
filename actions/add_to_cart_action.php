@@ -68,5 +68,12 @@ if (!isset($_SESSION['isNewOrder'])) {
 
     $order_id = $_SESSION['order_id'];
 
+    $result = add_to_cart($order_id, $item_id);
+
+    if ($result->affected_rows > 0) {
+        echo "<script>alert('added to cart');</script>";
+        echo "<script src='../js/restaurant-listings.js'>goToMenu($rest_id)</script>";
+    }
+
 }
 
