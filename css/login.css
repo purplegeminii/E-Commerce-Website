@@ -1,72 +1,82 @@
-body {
-    background-image: url('../images/login_bg.jpg');
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', ;
+}
+
+.login-container{
+    display: flex;
+    flex-direction: row; 
+    background: #181818;
+    color: #fff;
+    overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 300;
+    text-align: center;
+}
+
+.login-picture{
+    flex:1;
+    background-image: url("login-pic.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
-    margin: 0;
 }
-.top-banner {
-    background-color: #3498db;
-    color: black;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    word-spacing: 1px;
-    font-weight: bold;
-    font-size: larger;
+
+label{
+    font-size: 16px;
 }
-.login-container {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px
-}
-form {
-    display: flex;
-    flex-direction: column;
-}
-label {
-    margin-top: 10px;
-}
-input {
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-button {
-    padding: 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #45a049;
-}
-#error-message {
-    color: red;
-    margin-top: 15px;
-}
-.sign-up {
-    text-align: center;
-    margin-top: 20px;
-}
-.sign-up a {
-    color: #3498db;
+a{
     text-decoration: none;
+
 }
-.sign-up a:hover {
-    text-decoration: underline;
+
+.login-form{
+
+    font: 'Open Sans';
+    display: flex;
+    flex:1.7;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
 }
+
+form{
+    width: 200px;
+}
+
+span{
+    color: orangered;
+}
+#logo{
+    width: 60px;
+}
+
+.text-input{
+    width: 100%;
+    height: 20px;
+    border-radius: 4px;
+}
+
+#login-btn{
+    padding: 2px 20px;
+    background-color: orangered;
+    color: whitesmoke;
+    border: 0px;
+    border-radius: 48px;
+    line-height: 20px;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#login-btn:hover {
+    background-color:rgb(203, 54, 0)
+}
+
+
