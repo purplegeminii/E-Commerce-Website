@@ -59,7 +59,7 @@
        </div>
        
        <div id="hero-button">
-        <button id="action-button"><a href="login/register.php">Dine With Us</a></button>
+        <button id="action-button"><a href="login/login.php">Dine With Us</a></button>
        </div>
     </section>
 
