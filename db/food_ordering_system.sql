@@ -186,12 +186,6 @@ CREATE TABLE `Payments` (
 ALTER TABLE `Role`
     MODIFY `rid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
---
--- AUTO_INCREMENT for table `Order_Items`
---
-ALTER TABLE `Order_Items`
-    MODIFY `Order_Item_ID` int(11) NOT NULL AUTO_INCREMENT;
-
 -- Drop the generated column
 ALTER TABLE Order_Items DROP COLUMN Subtotal;
 
