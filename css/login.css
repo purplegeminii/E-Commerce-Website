@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6{
 
 .login-picture{
     flex:1;
-    background-image: url("login-pic.jpg");
+    background-image: url("../assets/images/login-pic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -29,9 +29,9 @@ h1,h2,h3,h4,h5,h6{
 label{
     font-size: 16px;
 }
+
 a{
     text-decoration: none;
-
 }
 
 .login-form{
