@@ -180,11 +180,14 @@ CREATE TABLE `Payments` (
   CONSTRAINT `Payments_ibfk_1` FOREIGN KEY (`Order_ID`) REFERENCES `Orders` (`Order_ID`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- AUTO_INCREMENT for table `Role`
---
-ALTER TABLE `Role`
-    MODIFY `rid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+-- Step 1: Drop the foreign key constraint
+ALTER TABLE `Users` DROP FOREIGN KEY `Users_ibfk_1`;
+
+-- Step 2: Modify the `rid` column
+ALTER TABLE `Role` MODIFY `rid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+-- Step 3: Recreate the foreign key constraint
+ALTER TABLE `Users` ADD CONSTRAINT `Users_ibfk_1` FOREIGN KEY (`rid`) REFERENCES `Role` (`rid`) ON UPDATE CASCADE ON DELETE CASCADE;
 
 -- Drop the generated column
 ALTER TABLE Order_Items DROP COLUMN Subtotal;
