@@ -216,6 +216,27 @@ END;
 //
 DELIMITER ;
 
+-- Create a AFTER INSERT trigger
+DELIMITER //
+CREATE TRIGGER update_total_price
+    AFTER INSERT ON Order_Items
+    FOR EACH ROW
+BEGIN
+    DECLARE orderTotal DECIMAL(10,2);
+
+    -- Calculate the total price for the order
+    SELECT SUM(Subtotal) INTO orderTotal
+    FROM Order_Items
+    WHERE Order_ID = NEW.Order_ID;
+
+    -- Update the Total_Price in the Orders table
+    UPDATE Orders
+    SET Total_Price = orderTotal
+    WHERE Order_ID = NEW.Order_ID;
+END;
+//
+DELIMITER ;
+
 --
 -- AUTO_INCREMENT for table `Payments`
 --
