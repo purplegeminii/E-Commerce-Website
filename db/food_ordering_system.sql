@@ -190,8 +190,34 @@ ALTER TABLE `Role`
 -- AUTO_INCREMENT for table `Order_Items`
 --
 ALTER TABLE `Order_Items`
-    MODIFY `Order_Item_ID` int(11) NOT NULL AUTO_INCREMENT,
-    MODIFY `Subtotal` decimal(10,2) GENERATED ALWAYS AS (`Quantity` * (SELECT Price FROM `Menu_Items` WHERE `Item_ID` = `Order_Items`.`Item_ID`)) STORED;
+    MODIFY `Order_Item_ID` int(11) NOT NULL AUTO_INCREMENT;
+
+-- Drop the generated column
+ALTER TABLE Order_Items DROP COLUMN Subtotal;
+
+-- Add a new column for Subtotal
+ALTER TABLE Order_Items ADD COLUMN Subtotal DECIMAL(10,2);
+
+-- Create a BEFORE INSERT trigger
+DELIMITER //
+CREATE TRIGGER calculate_subtotal_before_insert
+    BEFORE INSERT ON Order_Items
+    FOR EACH ROW
+BEGIN
+    SET NEW.Subtotal = NEW.Quantity * (SELECT Price FROM Menu_Items WHERE Item_ID = NEW.Item_ID);
+END;
+//
+
+-- Create a BEFORE UPDATE trigger
+DELIMITER //
+CREATE TRIGGER calculate_subtotal_before_update
+    BEFORE UPDATE ON Order_Items
+    FOR EACH ROW
+BEGIN
+    SET NEW.Subtotal = NEW.Quantity * (SELECT Price FROM Menu_Items WHERE Item_ID = NEW.Item_ID);
+END;
+//
+DELIMITER ;
 
 --
 -- AUTO_INCREMENT for table `Payments`

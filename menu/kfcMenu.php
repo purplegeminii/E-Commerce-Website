@@ -7,6 +7,7 @@ $menu = get_all_menu_items(1);
 $categories = get_all_categories(1);
 mysqli_close($conn);
 $_SESSION['rest_id'] = 1;
+$_SESSION['rest_url'] = '../menu/kfcMenu.php';
 ?>
 
 <!DOCTYPE html>
