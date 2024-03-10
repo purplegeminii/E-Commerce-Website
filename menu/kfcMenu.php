@@ -39,8 +39,10 @@ $_SESSION['rest_url'] = '../menu/kfcMenu.php';
                 <div class="menu-item-details">
                     <h2 class="menu-item-name"><?= $item['Name']?></h2>
                     <p class="menu-item-price">$<?= $item['Price']?></p>
-<!--                    <a href="../actions/add_to_cart_action.php?item_id=--><?php //= $item['Item_ID'] ?><!--"><button class="add-to-cart-button">Add to Cart</button></a>-->
-                    <button class="add-to-cart-button" data-itemId="<?= $item['Item_ID'] ?>">Add to Cart</button>
+                    <a href="../actions/add_to_cart_action.php?item_id=<?= $item['Item_ID'] ?>">
+                        <button class="add-to-cart-button" data-item-id="<?= $item['Item_ID'] ?>">Add to Cart</button>
+                    </a>
+<!--                    <button class="add-to-cart-button" data-item-id="--><?php //= $item['Item_ID'] ?><!--">Add to Cart</button>-->
                 </div>
             </div>
             <?php endforeach; ?>
