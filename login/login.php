@@ -4,7 +4,7 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Login page</title>
-    <link rel='stylesheet' href='login.css'>
+    <link rel='stylesheet' href='../css/login.css'>
 </head>
 <body>
     <div class="login-container">
@@ -14,17 +14,17 @@
         <div class="login-form">
            
             <div id="company-logo">
-                <img src="logo-transformed.png" id="logo" alt="company-logo">
+                <img src="../assets/images/logo-transformed.png" id="logo" alt="company-logo">
             </div>
 
             <div>
                 <h2>
                     Welcome to <span>Eats Elite</span>
-               </h2> <br>
+                </h2> <br>
 
                <h2>
                     Login <span>Here</span>
-                </h2>
+               </h2>
 
             </div>
             <br><br>
