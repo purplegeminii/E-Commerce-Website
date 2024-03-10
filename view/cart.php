@@ -1,3 +1,8 @@
+<?php
+include "../functions/get_cart_items.php";
+include "../functions/get_total_price.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,22 +32,49 @@
             <h2>Your Cart</h2><a href="../menu/kfcMenu.php">Continue shopping</a>
             <hr>
             <div class="cart-items">
-                <div class="cart-item">
-                    <img src="../images/Burger.jpg" alt="Burger">
-                    <div class="item-details">
-                        <p>Vegan Spicy Burger</p>
-                        <p>Quantity: 1</p>
-                        <p>Price: $5.99</p>
-                    </div>
-                    <button class="remove-item">Remove</button>
-                </div>
-                <!-- More cart items can be added here -->
+                <?php
+                if (isset($_SESSION['order_id'])) {
+                    $order_id = $_SESSION['order_id'];
+                    $cartItems = get_cart_items($order_id);
+                ?>
+                    <?php foreach ($cartItems as $item): ?>
+                        <div class="cart-item">
+                            <img src="<?= $item['Item_Image'] ?>" alt="<?= $item['Item_Name'] ?>">
+                            <div class="item-details">
+                                <p><?= $item['Item_Name'] ?></p>
+                                <p>Quantity: <?= $item['Quantity'] ?></p>
+                                <p>Price: $<?= $item['Item_Price'] ?></p>
+                            </div>
+                            <a href="../actions/remove_from_cart.php?order_item_id=<?= $item['Order_Item_ID'] ?>">
+                                <button class="remove-item">Remove</button>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                <?php } else {
+                    echo "<h1>No Item in the cart yet</h1>";
+                } ?>
             </div>
             <hr>
             <div class="cart-total">
-                <p>Subtotal: $5.99</p>
-                <p>Taxes and shipping calculated at checkout</p>
-                <button class="checkout-button">Checkout</button>
+                <?php
+                    if (isset($_SESSION['order_id'])) {
+                        $order_id = $_SESSION['order_id'];
+                        $total_price = get_order_total_price($order_id);
+                        if ($total_price !== null) {
+                            echo "<p>Total Price: $<?= $total_price ?></p>";
+                            echo "<p>Taxes and shipping calculated at checkout</p>";
+                            echo "<a href='../actions/remove_from_cart.php?order_id=<?= $order_id ?>'><button class='checkout-button'>Checkout</button></a>";
+                        } else {
+                            echo "<p>Total Price: $0.00</p>";
+                            echo "<p>Taxes and shipping calculated at checkout</p>";
+                            echo "<button class='checkout-button' disabled='disabled' style='background-color: gray'>Checkout</button>";
+                        }
+                    } else {
+                        echo "<p>Total Price: $0.00</p>";
+                        echo "<p>Taxes and shipping calculated at checkout</p>";
+                        echo "<button class='checkout-button' disabled='disabled' style='background-color: gray'>Checkout</button>";
+                    }
+                ?>
             </div>
         </section>
     </main>

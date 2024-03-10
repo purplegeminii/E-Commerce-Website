@@ -21,6 +21,7 @@ function add_to_cart($cust_id, $rest_id, $item_id): bool {
         // Use the existing open order
         $orderRow = $existingOrderResult->fetch_assoc();
         $order_id = $orderRow['Order_ID'];
+        $_SESSION['order_id'] = $orderRow['Order_ID'];
     } else {
         // Create a new order
         $newOrderQuery = "INSERT INTO Orders (Customer_ID, Restaurant_ID, Status) VALUES (?, ?, 'Pending')";
@@ -30,6 +31,7 @@ function add_to_cart($cust_id, $rest_id, $item_id): bool {
 
         // Get the ID of the newly created order
         $order_id = $stmtNewOrder->insert_id;
+        $_SESSION['order_id'] = $order_id;
     }
 
     // Add the item to the cart
