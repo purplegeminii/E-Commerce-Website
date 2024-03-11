@@ -31,16 +31,22 @@ function update_quantity($order_item_id, $quantity): bool {
 if ($action == "minus") {
     $new_qty = $current_qty - 1;
     if (update_quantity($order_item_id, $new_qty)) {
+//        echo "<script>window.location.href='../view/cart.php'></script>";
+//        echo "<script>window.location.reload();</script>";
+//        exit();
         header("location: ../view/cart.php");
     } else {
-        echo "error";
+        echo "minus error";
     }
 } else if ($action == "plus") {
     $new_qty = $current_qty + 1;
     if (update_quantity($order_item_id, $new_qty)) {
+//        echo "<script>window.location.href='../view/cart.php'></script>";
+//        echo "<script>window.location.reload();</script>";
+//        exit();
         header("location: ../view/cart.php");
     } else {
-        echo "error";
+        echo "plus error";
     }
 } else {
     echo "invalid action";
