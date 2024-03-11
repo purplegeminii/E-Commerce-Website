@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "../functions/get_cart_items.php";
 include "../functions/get_total_price.php";
 ?>
@@ -42,7 +43,15 @@ include "../functions/get_total_price.php";
                             <img src="<?= $item['Item_Image'] ?>" alt="<?= $item['Item_Name'] ?>">
                             <div class="item-details">
                                 <p><?= $item['Item_Name'] ?></p>
-                                <p>Quantity: <?= $item['Quantity'] ?></p>
+                                <div class="quantity-section">
+                                    <a href="../functions/update_quantity.php?order_item_id=<?= $item['Order_Item_ID'] ?>&action=minus&qty=<?= $item['Quantity'] ?>">
+                                        <button class="quantity-btn" data-action="minus">-</button>
+                                    </a>
+                                    <p class="quantity"><?= $item['Quantity'] ?></p>
+                                    <a href="../functions/update_quantity.php?order_item_id=<?= $item['Order_Item_ID'] ?>&action=plus&qty=<?= $item['Quantity'] ?>">
+                                        <button class="quantity-btn" data-action="plus">+</button>
+                                    </a>
+                                </div>
                                 <p>Price: $<?= $item['Item_Price'] ?></p>
                             </div>
                             <a href="../actions/remove_from_cart.php?order_item_id=<?= $item['Order_Item_ID'] ?>">
@@ -61,9 +70,9 @@ include "../functions/get_total_price.php";
                         $order_id = $_SESSION['order_id'];
                         $total_price = get_order_total_price($order_id);
                         if ($total_price !== null) {
-                            echo "<p>Total Price: $<?= $total_price ?></p>";
+                            echo "<p>Total Price: $" . $total_price . "</p>";
                             echo "<p>Taxes and shipping calculated at checkout</p>";
-                            echo "<a href='../actions/remove_from_cart.php?order_id=<?= $order_id ?>'><button class='checkout-button'>Checkout</button></a>";
+                            echo "<a href='../actions/checkout_order.php?order_id=<?= $order_id ?>'><button class='checkout-button'>Checkout</button></a>";
                         } else {
                             echo "<p>Total Price: $0.00</p>";
                             echo "<p>Taxes and shipping calculated at checkout</p>";
@@ -81,5 +90,6 @@ include "../functions/get_total_price.php";
     <footer>
         <p>&copy; 2024 Eats Elite</p>
     </footer>
+<!--    <script src="../js/cart.js"></script>-->
 </body>
 </html>
