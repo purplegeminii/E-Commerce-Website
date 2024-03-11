@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="restaurant-listings.css">
+    <link rel="stylesheet" href="../css/restaurant-listings.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -15,7 +15,7 @@
     <div class="header-container">
         <div class="logo">
              <!-- Logo goes here -->
-             <a href="index.php"><img height="auto" width="60px" src="assets/images/logo-transformed.png" alt="logo"></a>
+             <a href="../index.php"><img height="auto" width="60px" src="../assets/images/logo-transformed.png" alt="logo"></a>
         </div> 
          
              <ul id="menu">
@@ -25,7 +25,7 @@
                         <div class="dropdown-content">
                             <a href="#">Item History</a>
                             <a href="#">User Info</a>
-                            <a href="#">Logout</a>
+                            <a href="../login/logout.php">Logout</a>
                         </div>
                  </div>
                   <li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a> </li>   
@@ -50,7 +50,7 @@
 
             <div class="stat-box munchies">
                 <a href="#">
-                    <img src="../assests/images/munchies-img.png"  alt="logo">
+                    <img src="../assets/images/munchies-img.png"  alt="logo">
                 </a>
             </div>
 
