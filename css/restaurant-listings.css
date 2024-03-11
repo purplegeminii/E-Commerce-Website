@@ -1,297 +1,147 @@
-.header-header {
-  width: 100%;
-  height: 99px;
-  display: flex;
-  position: relative;
-  align-items: flex-start;
-  background-color: #464E2E;
-}
-
-.header-text {
-  color: #E9E5D6;
-  font-size: 50px;
-  align-self: center;
-  font-style: normal;
-  font-family: "Roboto";
-  font-weight: 800;
-  margin-left: 40px; /* Changed from var(--dl-space-space-fourunits) */
-}
-
-.header-restaurants {
-  top: 42px;
-  color: #f1ece1;
-  right: 192px;
-  position: absolute;
-  align-self: center;
-  text-align: justify;
-}
-
-.header-meals {
-  top: 42px;
-  right: 128px;
-  margin: auto;
-  position: absolute;
-  align-self: center;
-  text-align: justify;
-}
-
-.header-logout {
-  top: 42px;
-  right: 64px;
-  position: absolute;
-  align-self: center;
-  text-align: justify;
-}
-
-.restaurant-listings-container {
-  width: 100%;
-  display: flex;
-  overflow: auto;
-  min-height: 100vh;
-  align-items: center;
-  flex-direction: column;
-}
-
-.restaurant-listings-container01 {
-  flex:auto;
-  height: max-content;
-  width: 100%;
-  display: block;
-  align-items: center;
-  background-size: cover;
-  justify-content: center;
-  background-image: url("https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDEzfHxGT09EfGVufDB8fHx8MTcwNzg2MjQwNXww&ixlib=rb-4.0.3&w=1500");
-}
-
-.restaurant-listings-container02 {
-  width:100%;
-  height: 794px;
-  display: flex;
-  position: relative;
-  align-items: center;
-  background-size: cover;
-  justify-content: center;
-  background-image: url('https://images.unsplash.com/photo-1505935428862-770b6f24f629?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8c2VhcmNofDI4fHxmb29kfGVufDB8fHx8MTcwNzg1NTU2MHww&ixlib=rb-4.0.3&q=80&w=1200');
-  background-position: center;
-}
-
-.restaurant-listings-text {
-  top: 113px;
-  left: 186px;
-  right: 186px;
-  width: auto;
-  position: absolute;
-  font-size: 50px;
-}
-
-.restaurant-listings-container03 {
-  top: 245px;
-  left: 179px;
-  width: 789px;
-  height: 223px;
-  display: flex;
-  position: absolute;
+body {
+  font-family: Arial, sans-serif;
   align-items: center;
   justify-content: center;
+  margin: 0;
+}
+header {
+  background-color: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
 }
 
-.restaurant-listings-container04 {
-  top: 0px;
-  left: 0px;
-  width: 200px;
-  height: 223px;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  flex-direction: column;
+nav {
+background: rgb(0, 0, 0);
+color: white;
+position: sticky;
+top: 0;
+height: 60px;
+line-height: 60px;
+width: 100%;
+z-index: 10;
 }
 
-.restaurant-listings-button {
-  left: 42px;
-  color: #f5ebeb;
-  bottom: 0px;
-  position: absolute;
-  align-self: flex-end;
-  font-family: "Roboto";
-  background-color: #464e2e;
+.header-container{
+margin: auto;
+text-align: center;
+background-color:black;
+width: 100%;
+align-items: center;
+justify-content: space-between;
 }
 
-.restaurant-listings-image {
-  top: 0px;
-  left: 0px;
-  width: 200px;
-  height: 173px;
-  position: absolute;
-  object-fit: cover;
-  border-radius: 12px;
+.logo{
+float:left;
+margin-left: 30px;
+height: 30px;
+cursor: pointer;
+} @media (max-width: 768px)  {
+.logo{ margin-left: 5px;}
 }
 
-.restaurant-listings-container05 {
-  top: 0px;
-  right: 0px;
-  width: 200px;
-  height: 223px;
-  display: flex;
-  position: absolute;
-  flex-direction: column;
+nav ul {
+display: flex;
+float: right;
+list-style: none;
+margin-right: 20px;
+margin-top: -2px;
+text-align: right;
+} 
+
+nav li {
+display: inline-block;
 }
 
-.restaurant-listings-button1 {
-  left: 70px;
-  color: #f5ebeb;
-  bottom: 0px;
-  position: absolute;
-  align-self: flex-end;
-  font-family: "Roboto";
-  background-color: #464e2e;
+nav li a { 
+color: rgb(209, 209, 209);    
+height: 50px;
+
+letter-spacing: 1px;
+margin: 0 20px;
+padding: 8px;
+position: relative;
+text-decoration: none;
+
+/* transition: all 0.5s ease; */
+/* -webkit-transition: all 0.5s ease; */
 }
 
-.restaurant-listings-image1 {
-  top: 0px;
-  left: 0px;
-  width: 200px;
-  height: 173px;
-  position: absolute;
-  object-fit: cover;
-  border-radius: 12px;
+
+nav ul li a:hover{
+text-decoration: none;
+box-shadow: 10px 8px 40px 40px orangered inset, 10px 8px 40px 40px orangered inset, 
+            10px 8px 40px 40px orangered inset, 10px 8px 40px 40px orangered inset;
+} 
+
+.dropdown {
+position: relative;
+display: inline-block;
 }
 
-.restaurant-listings-container06 {
-  top: 0px;
-  left: 305px;
-  width: 200px;
-  height: 223px;
-  display: flex;
-  position: absolute;
-  flex-direction: column;
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #181818;
+min-width: 150px;
+text-align: center;
+z-index: 1;
 }
 
-.restaurant-listings-button2 {
-  left: 70px;
-  color: #f5ebeb;
-  bottom: 0px;
-  position: absolute;
-  align-self: flex-end;
-  font-family: "Roboto";
-  background-color: #464e2e;
+.dropdown-content a {
+color: #fff;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
 }
 
-.restaurant-listings-image2 {
-  top: 0px;
-  left: 0px;
-  width: 200px;
-  height: 173px;
-  position: absolute;
-  object-fit: cover;
-  border-radius: 12px;
+.dropdown-content a:hover {
+background-color: #ff4500;
+text-decoration: none;
 }
 
-.restaurant-listings-container07 {
-  left: 184px;
-  width: 789px;
-  bottom: 41px;
-  height: 223px;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
+.dropdown:hover .dropdown-content {
+display: block;
 }
 
-.restaurant-listings-container08 {
-  top: 0px;
-  left: 0px;
-  width: 200px;
-  height: 223px;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  flex-direction: column;
+
+.listing {
+display: grid; 
+grid-template-columns: auto auto auto;
+margin: 20px;
+align-content: space-around;
+text-align: center;
 }
 
-.restaurant-listings-button3 {
-  left: 70px;
-  color: #f5ebeb;
-  bottom: 0px;
-  position: absolute;
-  align-self: flex-end;
-  font-family: "Roboto";
-  background-color: #464e2e;
+.stat-box {
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.restaurant-listings-image3 {
-  top: 0px;
-  left: 0px;
-  width: 200px;
-  height: 173px;
-  position: absolute;
-  object-fit: cover;
-  border-radius: 12px;
+.stat-box:hover {
+  transform: scale(1.05); /* Adjust the value to change the scale on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Adjust the box shadow properties as desired */
 }
 
-.restaurant-listings-container09 {
-  top: 0px;
-  right: 0px;
-  width: 200px;
-  height: 223px;
-  display: flex;
-  position: absolute;
-  flex-direction: column;
+
+.stat-box img{
+width: 100%;
 }
 
-.restaurant-listings-button4 {
-  left: 70px;
-  color: #f5ebeb;
-  bottom: 0px;
-  position: absolute;
-  align-self: flex-end;
-  font-family: "Roboto";
-  background-color: #464e2e;
-}
 
-.restaurant-listings-image4 {
-  top: 0px;
-  left: 0px;
-  width: 200px;
-  height: 173px;
-  position: absolute;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.restaurant-listings-container10 {
-  top: 0px;
-  left: 305px;
-  width: 200px;
-  height: 223px;
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-}
-
-.restaurant-listings-button5 {
-  left: 70px;
-  color: #f5ebeb;
-  bottom: 0px;
-  position: absolute;
-  align-self: flex-end;
-  font-family: "Roboto";
-  background-color: #464e2e;
-}
-
-.restaurant-listings-image5 {
-  top: 0px;
-  left: 0px;
-  width: 200px;
-  height: 173px;
-  position: absolute;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.restaurant-listings-container11 {
-  flex: 0 0 auto;
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: flex-start;
 }
