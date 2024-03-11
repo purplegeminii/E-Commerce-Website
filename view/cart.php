@@ -52,7 +52,7 @@ include "../functions/get_total_price.php";
                                         <button class="quantity-btn" data-action="plus">+</button>
                                     </a>
                                 </div>
-                                <p>Price: $<?= $item['Item_Price'] ?></p>
+                                <p>Unit Price: $<?= $item['Item_Price'] ?></p>
                             </div>
                             <a href="../actions/remove_from_cart.php?order_item_id=<?= $item['Order_Item_ID'] ?>">
                                 <button class="remove-item">Remove</button>
