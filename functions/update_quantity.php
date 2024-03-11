@@ -9,9 +9,20 @@ $current_qty = $_GET['qty'];
 function update_quantity($order_item_id, $quantity): bool {
     global $conn;
 
-    $sql = "UPDATE Order_Items SET Quantity = ? WHERE Order_Item_ID = ?";
+    // Fetch the current price of the item
+    $selectPriceQuery = "SELECT Price FROM Menu_Items WHERE Item_ID = (SELECT Item_ID FROM Order_Items WHERE Order_Item_ID = ?)";
+    $stmtSelectPrice = $conn->prepare($selectPriceQuery);
+    $stmtSelectPrice->bind_param("i", $order_item_id);
+    $stmtSelectPrice->execute();
+    $result = $stmtSelectPrice->get_result();
+    $row = $result->fetch_assoc();
+    $price = $row['Price'];
+
+    // Update the quantity and subtotal directly
+    $sql = "UPDATE Order_Items SET Quantity = ?, Subtotal = ? WHERE Order_Item_ID = ?";
+    $subtotal = $quantity * $price;
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ii", $quantity, $order_item_id);
+    $stmt->bind_param("idi", $quantity, $subtotal, $order_item_id);
     $stmt->execute();
 
     return $stmt->affected_rows > 0;

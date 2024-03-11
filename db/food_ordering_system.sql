@@ -216,19 +216,6 @@ END;
 //
 DELIMITER ;
 
--- Create an AFTER UPDATE trigger
-DELIMITER //
-CREATE TRIGGER calculate_subtotal_after_update
-    AFTER UPDATE ON Order_Items
-    FOR EACH ROW
-BEGIN
-    UPDATE Order_Items
-    SET Subtotal = NEW.Quantity * (SELECT Price FROM Menu_Items WHERE Item_ID = NEW.Item_ID)
-    WHERE Order_Item_ID = NEW.Order_Item_ID;
-END;
-//
-DELIMITER ;
-
 -- Create an AFTER INSERT trigger
 DELIMITER //
 CREATE TRIGGER update_total_price
