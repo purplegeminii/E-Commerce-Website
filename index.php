@@ -52,7 +52,7 @@
     <!-- Content -->
     <section class="hero-section" id="home">
        <div id="hero-section">
-            <h3 style="font-size: 28px;">Elite Eats</h3>
+            <h3 style="font-size: 28px;">Eats Elite</h3>
 
             <h1 style="font-size: 78px; letter-spacing: 22px;">GOOD FOOD<br>
                 GOOD MOOD</H1>
