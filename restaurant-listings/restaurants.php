@@ -28,7 +28,7 @@
                             <a href="../login/logout.php">Logout</a>
                         </div>
                  </div>
-                  <li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a> </li>   
+                 <li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a> </li>
              </ul>      
      </div>
  </nav>
