@@ -13,8 +13,6 @@ if (isset($_SESSION['order_id'])) {
     $stmt->bind_param("i", $order_id);
 
     if ($stmt->execute()) {
-        // Order cancellation successful
-        // You may want to log the cancellation reason or perform additional actions here
         echo "Order canceled successfully!";
     } else {
         // Error occurred during order cancellation
