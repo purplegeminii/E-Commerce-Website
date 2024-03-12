@@ -118,7 +118,7 @@ CREATE TABLE `Orders` (
   `Delivery_Address` varchar(255) DEFAULT NULL,
   `Order_Date_Time` datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
   `Delivery_Date_Time` datetime DEFAULT NULL,
-  `Payment_Status` enum('Pending','Paid') DEFAULT 'Pending' NOT NULL,
+  `Payment_Status` enum('Pending','Paid','Cancelled') DEFAULT 'Pending' NOT NULL,
   PRIMARY KEY (`Order_ID`),
   KEY `Customer_ID` (`Customer_ID`),
   KEY `Restaurant_ID` (`Restaurant_ID`),
