@@ -1,3 +1,8 @@
+<?php
+session_start();
+$user_id = $_SESSION['user_id'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,30 +16,30 @@
 
 </head>
 <body>
- <nav>
-    <div class="header-container">
-        <div class="logo">
-             <!-- Logo goes here -->
-             <a href="../index.php"><img height="auto" width="60px" src="../assets/images/logo-transformed.png" alt="logo"></a>
-        </div> 
-         
+    <nav>
+        <div class="header-container">
+            <div class="logo">
+                 <!-- Logo goes here -->
+                 <a href="../index.php"><img height="auto" width="60px" src="../assets/images/logo-transformed.png" alt="logo"></a>
+            </div>
+
              <ul id="menu">
-                 <li><a href="#home">HOME</a></li>
+                 <li><a href="../index.php">HOME</a></li>
                  <div class="dropdown">
                     <li><a href="#"><i class='fas'>&#xf406;</i> USER</a></li>
                         <div class="dropdown-content">
-                            <a href="#">Item History</a>
-                            <a href="#">User Info</a>
+                            <a id="item-history">Item History</a>
+                            <a id="user-profile">User Info</a>
                             <a href="../login/logout.php">Logout</a>
                         </div>
                  </div>
                  <li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a> </li>
-             </ul>      
-     </div>
- </nav>
+             </ul>
+        </div>
+    </nav>
 
 
-    <section class="listing">
+    <section class="listing" id="content">
         <div>
             <div class="stat-box Kfc">
                 <a href="../menu/kfcMenu.php">
@@ -82,5 +87,7 @@
     <footer>
         <p>&copy; 2024 Eats Elite. All rights reserved.</p>
     </footer>
+
+    <script src="../js/restaurant-listings.js"></script>
 </body>
 </html>
