@@ -26,3 +26,18 @@ itemHistory.addEventListener('click', function() {
             console.error('Error fetching JSON data:', error);
         });
 });
+
+userProfile.addEventListener('click', function() {
+    fetch('../actions/get_user_profile.php') // Fetch JSON data
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                loadContent(data.redirectUrl); // Load HTML content from redirectUrl
+            } else {
+                console.error('Error:', data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching JSON data:', error);
+        });
+});
