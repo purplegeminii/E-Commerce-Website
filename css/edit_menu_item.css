@@ -1,0 +1,40 @@
+/* CSS for form-wrap */
+.form-wrap {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrap h2 {
+    margin-bottom: 20px;
+}
+
+.form-wrap label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-wrap input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.form-wrap button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #fb4a0a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-wrap button[type="submit"]:hover {
+    background-color: #ec551e;
+}
