@@ -87,9 +87,6 @@ include "../functions/get_total_price.php";
             </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Eats Elite</p>
-    </footer>
 <!--    <script src="../js/cart.js"></script>-->
 </body>
 </html>
