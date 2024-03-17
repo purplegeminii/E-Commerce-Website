@@ -2,3 +2,6 @@
 A team project that includes HTML, CSS, JS, PHP, Database
 
 Ashesi University - Web Technologies course
+
+website link: http://18.133.105.236/eats-elite/
+

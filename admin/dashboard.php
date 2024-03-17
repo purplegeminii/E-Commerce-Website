@@ -41,7 +41,7 @@
                     <a href="management.php">
                         <button class="nav-btn"><i class="ri-edit-box-line"></i> Product Management </button></a>
                     <br>
-                    <a href="#">
+                    <a href="../login/logout.php">
                         <button class="nav-btn"> <i class="ri-logout-box-line"></i> Logout  </button>
                     </a>
                 </div>
