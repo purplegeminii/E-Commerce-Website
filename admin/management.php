@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/management.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Dashboard</title>
+    <title>Product Management</title>
 </head>
 <body>
     <div class="container">
@@ -16,7 +16,7 @@
         <div class="navbar">
             <div id="navbar-container">
                 <div class="platform">
-                    <img src="assets/images/logo-transformed.png" height=40px alt="">
+                    <img src="../assets/images/logo-transformed.png" height=40px alt="logo">
                     <h2>Eats Elite</h2>
                 </div>
                 
@@ -24,7 +24,7 @@
                 <div id="profile">
                     <div class="img-container" >
                         <div class="img-border">
-                            <img class="profile-pic" src="assets/images/KFC-img.png"  alt="profile">
+                            <img class="profile-pic" src="../assets/images/KFC-img.png"  alt="profile">
                       </div>
                     </div>
                     <!-- set to be round and possibly a change pic function -->
@@ -39,6 +39,9 @@
                     <a href="#">
                         <button class="nav-btn"><i class="ri-dashboard-line"></i> Dashboard </button></a>
                     <br>
+                    <a href="management.php">
+                        <button class="nav-btn"><i class="ri-edit-box-line"></i> Product Management </button></a>
+                    <br>
                     <a href="#">
                         <button class="nav-btn"> <i class="ri-logout-box-line"></i> Logout  </button>
                     </a>
@@ -52,32 +55,11 @@
         <div class="content">
             
            <div id="heading">
-            <h3>Dashboard</h3>
+            <h3>Product Management</h3>
             <p> Sales Update</p>
            </div>
             
            
-           <hr>
-            <section class="data-summary">
-                <div class="stat-box">
-                    <div class="day">
-                        <h5>Sold Today</h5>
-                        <p> 23</p>
-                    </div>
-
-                    <div class="week">
-                        <h5>Sold This Week</h5>
-                        <p> 48</p>
-                    </div>
-
-                    <div class="month">
-                        <h5>Sold This Month</h5>
-                        <p> 73</p>
-                    </div>
-                </div>
-                
-            </section>
-
             <section class="meals">
                 <div id=" meals">
                     <div class="header">

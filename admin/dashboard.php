@@ -15,7 +15,7 @@
         <div class="navbar">
             <div id="navbar-container">
                 <div class="platform">
-                    <img src="assets/images/logo-transformed.png" height=40px alt="">
+                    <img src="../assets/images/logo-transformed.png" height=40px alt="">
                     <h2>Eats Elite</h2>
                 </div>
                 
@@ -23,10 +23,10 @@
                 <div id="profile">
                     <div class="img-container" >
                         <div class="img-border">
-                            <img class="profile-pic" src="assets/images/KFC-img.png"  alt="profile">
+                            <img class="profile-pic" src="../assets/images/KFC-img.png"  alt="profile">
                       </div>
                     </div>
-                    <!-- set to be round and possibly a change pic function -->
+                    
                     <div class="profile-text">
                         <p>Welcome Back</p>
                     <h4>Kentucky Fried Chicken (KFC)</h4>
@@ -58,8 +58,7 @@
             <p> Sales Update</p>
            </div>
             
-           
-           <hr>
+
             <section class="data-summary">
                 <div class="stat-box">
                     <div class="day">
