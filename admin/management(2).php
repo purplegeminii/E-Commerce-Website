@@ -69,7 +69,7 @@ if (get_menu_items()) {
                     <a href="dashboard.php">
                         <button class="nav-btn"><i class="ri-dashboard-line"></i> Dashboard </button></a>
                     <br>
-                    <a href="management.php">
+                    <a href="management(2).php">
                         <button class="nav-btn"><i class="ri-edit-box-line"></i> Product Management </button></a>
                     <br>
                     <a href="add_product.php">
