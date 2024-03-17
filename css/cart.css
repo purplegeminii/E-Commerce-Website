@@ -96,3 +96,13 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.quantity-section {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    right: 15px;
+    justify-content: space-evenly;
+}

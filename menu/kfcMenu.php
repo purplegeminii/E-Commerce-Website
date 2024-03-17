@@ -22,9 +22,15 @@ $_SESSION['rest_url'] = '../menu/kfcMenu.php';
 
 <body>
     <div class="header">
-        <h1>KFC Menu</h1>
+        <h1 class="menu-title">KFC Menu</h1>
         <div class="line"></div>
+        <ul class="navbar">
+            <li class="center"><a href ="../restaurant-listings/restaurants.php">Restaurants</a></li>
+            <li class="upper"><a href ="../view/cart.php">Cart</a></li>
+            <li class="forward"><a href ="../login/logout.php">Logout</a></li>
+        </ul>
     </div>
+
     <div id="main" class="menu-container">
         <div class="category-buttons">
             <?php foreach ($categories as $category): ?>

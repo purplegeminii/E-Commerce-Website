@@ -118,7 +118,7 @@ CREATE TABLE `Orders` (
   `Delivery_Address` varchar(255) DEFAULT NULL,
   `Order_Date_Time` datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
   `Delivery_Date_Time` datetime DEFAULT NULL,
-  `Payment_Status` enum('Pending','Paid') DEFAULT 'Pending' NOT NULL,
+  `Payment_Status` enum('Pending','Paid','Cancelled') DEFAULT 'Pending' NOT NULL,
   PRIMARY KEY (`Order_ID`),
   KEY `Customer_ID` (`Customer_ID`),
   KEY `Restaurant_ID` (`Restaurant_ID`),
@@ -216,10 +216,31 @@ END;
 //
 DELIMITER ;
 
--- Create a AFTER INSERT trigger
+-- Create an AFTER INSERT trigger
 DELIMITER //
 CREATE TRIGGER update_total_price
     AFTER INSERT ON Order_Items
+    FOR EACH ROW
+BEGIN
+    DECLARE orderTotal DECIMAL(10,2);
+
+    -- Calculate the total price for the order
+    SELECT SUM(Subtotal) INTO orderTotal
+    FROM Order_Items
+    WHERE Order_ID = NEW.Order_ID;
+
+    -- Update the Total_Price in the Orders table
+    UPDATE Orders
+    SET Total_Price = orderTotal
+    WHERE Order_ID = NEW.Order_ID;
+END;
+//
+DELIMITER ;
+
+-- Create an AFTER UPDATE trigger
+DELIMITER //
+CREATE TRIGGER update_total_price_after_update
+    AFTER UPDATE ON Order_Items
     FOR EACH ROW
 BEGIN
     DECLARE orderTotal DECIMAL(10,2);

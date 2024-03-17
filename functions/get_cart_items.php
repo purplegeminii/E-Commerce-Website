@@ -23,6 +23,5 @@ function get_cart_items($order_id): false|mysqli_result {
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $order_id);
     $stmt->execute();
-    $result = $stmt->get_result();
-    return $result->fetch_assoc();
+    return $stmt->get_result();
 }

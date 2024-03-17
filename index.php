@@ -31,22 +31,6 @@
         </div>
     </nav>
 
-    <!-- Menu Icon -->
-    <div class="menuIcon">
-        <span class="icon-bars"></span>
-        <span class="icon-bars overlay"></span> 
-    </div>
-    
-    <div class="overlay-menu">
-        <ul id="menu">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#about-us">ABOUT US</a></li>
-            <li><a href="#reviews">OUR CUSTOMERS</a></li>
-            <li><a href="#contact-us">CONTACT US</a></li>
-            <li><a class="signup" href="#">SIGN UP</a></li>
-        </ul>
-    </div>
-
 
 
     <!-- Content -->
