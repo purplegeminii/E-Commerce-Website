@@ -56,7 +56,7 @@
             
            <div id="heading">
             <h3>Product Management</h3>
-            <p> Sales Update</p>
+            <p> Manage Product</p>
            </div>
             
            
