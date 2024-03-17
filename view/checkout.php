@@ -13,7 +13,7 @@
 
 <div class="container">
 
-    <form action="">
+    <form action="../actions/pay_for_order.php" method="POST">
         <div class="row">
             <div class="col">
                 <h3 class="title">Billing Address</h3>
@@ -83,11 +83,15 @@
 
         </div>
 
-        <input type="submit" value="Pay Now" class="submit-btn">
+        <input type="submit" value="Pay Now" class="submit-btn" id="pay-button" name="pay-button">
+        <a href="../functions/cancel_order.php">
+            <button name="cancel-button" id="cancel-button">Cancel</button>
+        </a>
 
     </form>
 
 </div>
+<script src="../js/checkout.js"></script>
 
 </body>
 </html>

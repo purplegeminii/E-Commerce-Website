@@ -72,7 +72,7 @@ include "../functions/get_total_price.php";
                         if ($total_price !== null) {
                             echo "<p>Total Price: $" . $total_price . "</p>";
                             echo "<p>Taxes and shipping calculated at checkout</p>";
-                            echo "<a href='../actions/checkout_order.php?order_id=<?= $order_id ?>'><button class='checkout-button'>Checkout</button></a>";
+                            echo "<a href='../actions/checkout_order.php?order_id=" . $order_id . "'><button class='checkout-button'>Checkout</button></a>";
                         } else {
                             echo "<p>Total Price: $0.00</p>";
                             echo "<p>Taxes and shipping calculated at checkout</p>";
