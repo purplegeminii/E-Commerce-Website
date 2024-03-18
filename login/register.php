@@ -13,8 +13,6 @@ session_start();
 <body>
     <div class="sign-up-container">
 
-        <div class="sign-up-picture"></div>
-
         <div class="sign-up-form">
            
             <div id="company-logo">
@@ -35,19 +33,24 @@ session_start();
                 <label for="lname">LAST NAME:</label><br>
                 <input placeholder='Last Name' type='text' name='last-name-input' id='lname' required />
 
-                <label for='male'>MALE</label><input type='radio' name='gender' id='male' value='Male' />
+                <label for='male'>MALE</label><input type='radio' name='gender' id='male' value='Male' /><br>
                 <label for='female'>FEMALE</label><input type='radio' name='gender' id='female' value='Female' /><br><br>
 
-                <label for='tel'></label>
+                <label for='tel'>TELPHONE:</label>
                 <input placeholder='+233-XXX-XXX-XXX' type='tel' name='phone-number' id='tel' pattern='+233-[0-9]{2}-[0-9]{3}-[0-9]{4}' required/>
 
+                <label for='tel'>EMAIL:</label>
                 <input placeholder='EMAIL' type='email' name='email-input' id='email' required />
+
+                <label for='tel'>PASSWORD:</label>
                 <input placeholder='PASSWORD' type='password' name='password1' id='pwd1' required />
+
+                <label for='tel'>CONFIRM PASSWORD:</label>
                 <input placeholder='CONFIRM PASSWORD' type='password' name='password2' id='pwd2' required />
 
                 <button type='submit' name='sign-up-button' id='sign-up-btn'>SIGN UP</button><br>
                 
-                <br><p class="sign-up">Already have an account? <a href='login.php'>Login Here</a></p>
+                <p class="sign-up">Already have an account? <a href='login.php'>Login Here</a></p>
 
 </form>
 

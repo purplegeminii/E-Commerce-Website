@@ -11,8 +11,9 @@ body {
     color: #fff; 
     display: flex;
     align-items: center;
+    overflow: scroll;
     justify-content: center;
-    height: 100vh;
+    height: auto;
     margin: 0;
 }
 
@@ -22,13 +23,6 @@ body {
     overflow: hidden;
 }
 
-.sign-up-picture {
-    flex: 1;
-    background-image: url("../assets/images/login-pic.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
@@ -37,15 +31,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .sign-up-form {
     display: flex;
-    flex: 1.7;
-    height: 100vh;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
+#company-logo{
+    position: absolute;
+    top:40%;
+    opacity: 0.3;
+    z-index: 8;
+}
+
 form {
-    width: 300px; 
+    width: 300px;
+    margin-top: 10px;
+    z-index: 12;
 }
 
 label {
@@ -57,9 +58,6 @@ span {
     color: orangered;
 }
 
-#logo {
-    width: 10px;
-}
 
 input, select, button {
     width: 100%;
@@ -73,12 +71,13 @@ input, select, button {
 }
 
 input[type="radio"] {
-    margin: 0 5px;
+    width:auto;
+    margin: 10px 5px;
 }
 
 button {
     background-color: orangered;
-    box-shadow: 0 0 20px 9px #CC5500;
+    box-shadow: 0 0 10px #CC5500;
     margin: 20px auto;
     border: none;
     border-radius: 48px;
