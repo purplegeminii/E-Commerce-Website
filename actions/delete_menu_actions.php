@@ -1,5 +1,6 @@
 <?php
 include "../settings/connection.php";
+global $conn;
 
 if (isset($_GET['id'])) {
     $menuId = $_GET['id'];
