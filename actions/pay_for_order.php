@@ -43,7 +43,7 @@ $update_order_success = $update_order_stmt->execute();
 if ($insert_payment_success && $update_order_success) {
     // Commit the transaction if both queries were successful
     mysqli_commit($conn);
-    header("location: ../restaurant-listings/restaurants.php");
+    header("location: ../view/restaurants.php");
 } else {
     // Rollback the transaction if any query failed
     mysqli_rollback($conn);

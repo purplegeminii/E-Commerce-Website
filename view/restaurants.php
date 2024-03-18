@@ -29,7 +29,7 @@
                             <a href="../login/logout.php">Logout</a>
                         </div>
                  </div>
-                 <li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a> </li>
+                 <li><a href="../view/cart.php"><i class="fa fa-shopping-cart"></i> Cart</a> </li>
              </ul>
         </div>
     </nav>
@@ -39,29 +39,23 @@
         <div>
             <div class="stat-box Kfc">
                 <a href="../menu/kfcMenu.php">
-                    <img src="../assets/images/KFC-img.png"  alt="logo">
+                    <img src="../assets/images/KFC-img.png" alt="logo">
                 </a>
             </div>
-            
-            
-
         </div>
 
         <div>
-
             <div class="stat-box munchies">
-                <a href="#">
-                    <img src="../assets/images/munchies-img.png"  alt="logo">
+                <a href="../menu/kfcMenu.php">
+                    <img src="../assets/images/munchies-img.png" alt="logo">
                 </a>
             </div>
-
-
         </div>
 
         <div>
             <div class="stat-box sushi">
                 <a href="#">
-                    <img src="../assets/images/sushi-img.png"  alt="logo">
+                    <img src="../assets/images/sushi-img.png" alt="logo">
                 </a>       
             </div>
         </div>
@@ -80,9 +74,6 @@
 
     </section>
 
-    <footer>
-        <p>&copy; 2024 Eats Elite. All rights reserved.</p>
-    </footer>
 
     <script src="../js/restaurant-listings.js"></script>
 </body>

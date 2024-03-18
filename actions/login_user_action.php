@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($row['rid']==2) {
                 header("location: ../admin/dashboard.php");
             } else if ($row['rid']==3) {
-                header("location: ../restaurant-listings/restaurants.php");
+                header("location: ../view/restaurants.php");
             }
             exit();
         } else {
