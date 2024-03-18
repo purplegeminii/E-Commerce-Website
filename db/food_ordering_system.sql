@@ -89,7 +89,7 @@ VALUES
     (1, 'CRUNCH BURGER - ZINGER', NULL, 9.00, 'burgers', 1, 'https://cdn.tictuk.com/82a4add3-65fc-52b9-9408-0726b13919cb/28dd573b-f5ce-877d-2c06-3041d5a803a3.jpeg?a=799af0c6-b4cb-d8b2-c88b-aa26d5067b66'),
     (1, 'COLONEL TOWER BURGER', NULL, 9.00, 'burgers', 1, 'https://cdn.tictuk.com/82a4add3-65fc-52b9-9408-0726b13919cb/ccb74601-58cc-156a-3e6a-9f8ba789fe90.jpeg?a=9fa119cf-bfc8-b92e-18fa-79aea52439c4'),
     (1, 'BURGER MEAL - ZINGER', NULL, 7.00, 'meals', 1, 'https://cdn.tictuk.com/2df0b3fc-3555-d893-fd12-dedb0d869bf1/3ad6bb04-a5e6-6568-2997-fcb5319e3d83.jpeg?a=26c629e1-3672-736f-4cae-466483113b0c'),
-    (1, 'BOX MASTER ZINGER', NULL, 8.00, 'meals', 1, 'https://cdn.tictuk.com/2df0b3fc-3555-d893-fd12-dedb0d869bf1/2e5f0fb9-87b2-288e-32b7-8959e7034321.jpeg?a=83412a80-0137-c06a-43e5-c2c88dc1d3c4'),
+    (1, 'BOX MASTER ZINGER', NULL, 8.00, 'meals', 1, 'https://cdn.tictuk.com/82a4add3-65fc-52b9-9408-0726b13919cb/9457835e-a594-b8f1-3d8c-94e81bcbeb68.jpeg?a=a2d22ccb-9ffe-8682-4385-9540cbb55098'),
     (1, 'TWISTER MEAL - ZINGER', NULL, 8.00, 'meals', 1, 'https://cdn.tictuk.com/82a4add3-65fc-52b9-9408-0726b13919cb/28dd573b-f5ce-877d-2c06-3041d5a803a3.jpeg?a=799af0c6-b4cb-d8b2-c88b-aa26d5067b66'),
     (1, 'FAMILY TREAT', NULL, 12.00, 'meals', 1, 'https://cdn.tictuk.com/2df0b3fc-3555-d893-fd12-dedb0d869bf1/3ad6bb04-a5e6-6568-2997-fcb5319e3d83.jpeg?a=26c629e1-3672-736f-4cae-466483113b0c'),
     (1, 'REGULAR OREO KRUSHER', NULL, 5.00, 'desserts', 1, 'https://cdn.tictuk.com/2df0b3fc-3555-d893-fd12-dedb0d869bf1/21c76f04-2697-4296-e7c8-52c918ba9f7c.jpeg?a=c59aca31-7653-a168-3e7a-cfa3afbaad19'),
