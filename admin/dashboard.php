@@ -60,20 +60,24 @@
             
 
             <section class="data-summary">
+                <?php
+                include "../functions/count_orders.php";
+                global $orders_count;
+                ?>
                 <div class="stat-box">
                     <div class="day">
                         <h5>Sold Today</h5>
-                        <p> 23</p>
+                        <p><?= $orders_count['PaidOrdersToday'] ?></p>
                     </div>
 
                     <div class="week">
                         <h5>Sold This Week</h5>
-                        <p> 48</p>
+                        <p><?= $orders_count['PaidOrdersThisWeek'] ?></p>
                     </div>
 
                     <div class="month">
                         <h5>Sold This Month</h5>
-                        <p> 73</p>
+                        <p><?= $orders_count['PaidOrdersThisMonth'] ?></p>
                     </div>
                 </div>
                 
