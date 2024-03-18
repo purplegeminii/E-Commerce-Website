@@ -56,7 +56,7 @@ $name = isset($item['Name']) ? $item['Name'] : '';
                     <a href="dashboard.php">
                         <button class="nav-btn"><i class="ri-dashboard-line"></i> Dashboard </button></a>
                     <br>
-                    <a href="management(2).php">
+                    <a href="management.php">
                         <button class="nav-btn"><i class="ri-edit-box-line"></i> Product Management </button></a>
                     <br>
                     <a href="add_product.php">

@@ -47,7 +47,7 @@
                         <button class="nav-btn"> <i class="ri-logout-box-line"></i> Add Product </button>
                     </a>
                     <br>
-                    <a href="edit_product.php">
+                    <a href="edit_menu_item.php">
                         <button class="nav-btn"> <i class="ri-edit-line"></i> Edit Product </button>
                     </a>
                     <br>
