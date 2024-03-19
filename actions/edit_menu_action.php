@@ -1,5 +1,6 @@
 <?php
 include "../settings/connection.php";
+global $conn;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(isset($_POST['itemId'], $_POST['itemName'])) {
@@ -11,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("si", $name, $itemId);
         
         if ($stmt->execute()) {
-            header('Location: ../admin/management(2).php');
+            header('Location: ../admin/management.php');
             exit();
         } else {
             echo "Error updating menu item: " . $stmt->error;

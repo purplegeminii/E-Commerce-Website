@@ -1,5 +1,4 @@
 <?php
-session_start();
 include "../settings/connection.php";
 $_SESSION['rest_id'] = 1;
 $rest_id = $_SESSION['rest_id'];

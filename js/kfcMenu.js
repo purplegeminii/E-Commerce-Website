@@ -21,7 +21,7 @@ $(document).ready(function() {
     //
     //     // Send an AJAX request to add the item to the cart
     //     $.ajax({
-    //         url: "../actions/add_to_cart_action.php",
+    //         url: "../actions/add_to_cart.php",
     //         method: "GET",
     //         data: { item_id: itemId },
     //         success: function (response) {

@@ -41,7 +41,9 @@ CREATE TABLE `Users` (
 
 -- Dumping data for table `Users`
 INSERT INTO `Users` (fname, lname, gender, dob, email, passwd, tel, address, rid)
-VALUES ('John', 'Mensah', 'Male', '1970-08-20', 'kfcadmin126@gmail.com', '$2y$10$6fnTRb.sjgJr8QB/bwRK2.jdRnpzx4n6wRZBBnMgTbDjGkjTeDily', '+233-59-444-4444', 'Accra', 2);
+VALUES
+    ('John', 'Mensah', 'Male', '1970-08-20', 'kfcadmin126@gmail.com', '$2y$10$6fnTRb.sjgJr8QB/bwRK2.jdRnpzx4n6wRZBBnMgTbDjGkjTeDily', '+233-59-444-4444', 'Accra', 2),
+    ('Kwaku', 'Afif', 'Male', '2000-01-31', 'kwakuafif@gmail.com', '$2y$10$6fnTRb.sjgJr8QB/bwRK2.jdRnpzx4n6wRZBBnMgTbDjGkjTeDily', '+233-59-666-6666', 'Accra', 3);
 
 -- Table structure for table Restaurants
 --
@@ -125,6 +127,34 @@ CREATE TABLE `Orders` (
   CONSTRAINT `Orders_ibfk_1` FOREIGN KEY (`Customer_ID`) REFERENCES `Users` (`User_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `Orders_ibfk_2` FOREIGN KEY (`Restaurant_ID`) REFERENCES `Restaurants` (`Restaurant_ID`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table Orders
+INSERT INTO Orders (Customer_ID, Restaurant_ID, Status, Total_Price, Order_Date_Time, Payment_Status)
+VALUES
+    (2, 1, 'Completed', 0.00, '2024-01-04 09:30:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-01-05 12:45:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-01-06 15:20:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-01-07 18:10:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-02-01 20:55:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-02-02 11:40:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-02-03 14:30:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-02-11 17:25:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-02-12 19:15:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-02-13 09:00:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-03-08 20:55:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-03-09 11:40:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-03-10 14:30:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-03-11 17:25:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-03-12 19:15:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-03-13 09:00:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-03-14 11:50:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-03-15 13:40:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-03-16 16:35:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-03-17 18:20:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-03-18 10:15:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-03-18 15:15:00', 'Paid'),
+    (2, 1, 'Completed', 0.00, '2024-03-18 17:15:00', 'Paid');
 
 -- Table structure for table Order_Items
 --
@@ -263,6 +293,31 @@ DELIMITER ;
 --
 ALTER TABLE `Payments`
   MODIFY `Payment_ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Dumping data for table Order_Items
+INSERT INTO Order_Items (Order_ID, Item_ID, Quantity, Subtotal)
+VALUES
+    (1, 1, 1, 0.00),
+    (2, 2, 1, 0.00),
+    (3, 3, 1, 0.00),
+    (4, 4, 1, 0.00),
+    (5, 5, 1, 0.00),
+    (6, 6, 1, 0.00),
+    (7, 7, 1, 0.00),
+    (8, 8, 1, 0.00),
+    (9, 9, 1, 0.00),
+    (10, 10, 1, 0.00),
+    (11, 11, 1, 0.00),
+    (12, 12, 1, 0.00),
+    (13, 13, 1, 0.00),
+    (14, 14, 1, 0.00),
+    (15, 15, 1, 0.00),
+    (16, 16, 1, 0.00),
+    (17, 17, 1, 0.00),
+    (18, 18, 1, 0.00),
+    (19, 19, 1, 0.00),
+    (20, 20, 1, 0.00);
 
 
 COMMIT;

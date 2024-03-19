@@ -25,7 +25,7 @@ $_SESSION['rest_url'] = '../menu/kfcMenu.php';
         <h1 class="menu-title">KFC Menu</h1>
         <div class="line"></div>
         <ul class="navbar">
-            <li class="center"><a href ="../restaurant-listings/restaurants.php">Restaurants</a></li>
+            <li class="center"><a href ="../view/restaurants.php">Restaurants</a></li>
             <li class="upper"><a href ="../view/cart.php">Cart</a></li>
             <li class="forward"><a href ="../login/logout.php">Logout</a></li>
         </ul>

@@ -1,4 +1,5 @@
 <?php
+include "../settings/core.php";
 include "../functions/get_menu_items.php";
 
 $menuItems = [];

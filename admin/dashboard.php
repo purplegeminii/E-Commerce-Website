@@ -1,3 +1,7 @@
+<?php
+include "../settings/core.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,6 +97,7 @@
                         <div class="filter-buttons">
                             <button id="filter-btn" onclick="dateFilter('hour')">Hour</button>
                             <button id="filter-btn" onclick="dateFilter('day')">Day</button>
+                            <button id="filter-btn" onclick="dateFilter('week')">Week</button>
                             <button id="filter-btn" onclick="dateFilter('month')">Month</button>
                             <button id="filter-btn" onclick="dateFilter('year')">Year</button>
                         </div>
