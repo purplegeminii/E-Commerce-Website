@@ -36,6 +36,12 @@ session_start();
                 <label for='male'>MALE</label><input type='radio' name='gender' id='male' value='Male' /><br>
                 <label for='female'>FEMALE</label><input type='radio' name='gender' id='female' value='Female' /><br><br>
 
+                <label for='tel'>Date Of Birth:</label>
+                <input  type='date' name='date-of-birth' id='dob'  required/>
+
+                <label for='tel'>ADDRESS:</label>
+                <input placeholder='1 University Avenue' type='text' name='address' id='address' pattern='+233-[0-9]{2}-[0-9]{3}-[0-9]{4}' required/>
+
                 <label for='tel'>TELPHONE:</label>
                 <input placeholder='+233-XXX-XXX-XXX' type='tel' name='phone-number' id='tel' pattern='+233-[0-9]{2}-[0-9]{3}-[0-9]{4}' required/>
 

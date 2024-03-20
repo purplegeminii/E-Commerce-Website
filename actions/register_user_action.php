@@ -41,7 +41,6 @@ if (isset($_POST['sign-up-button'])) {
 
 
     if ($create_record->affected_rows > 0) {
-        echo '<script>alert("register successful")</script>';
         echo '<script>window.location.href="../login/login.php";</script>';
         exit();
     } else {

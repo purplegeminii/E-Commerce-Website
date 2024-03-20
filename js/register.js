@@ -18,18 +18,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function validateEmail() {
         const emailValue = emailInput.value.trim();
-        signUpButton.disabled = emailValue === '' || !emailRegex.test(emailValue);
+        if (!emailRegex.test(emailValue)) {
+            emailInput.setCustomValidity('Please enter a valid email address.');
+            // signUpButton.disabled = true;
+        } else {
+            emailInput.setCustomValidity('');
+            // signUpButton.disabled = false;
+        }
     }
 
     function validatePassword1() {
         const passwordValue1 = passwordInput1.value.trim();
-        signUpButton.disabled = passwordValue1 === '' || !passwordRegex.test(passwordValue1);
+        if (!passwordRegex.test(passwordValue1)) {
+            passwordInput1.setCustomValidity('Password must\n  ' +
+                '      Have at least 8 characters long\n' +
+                '      Contain at least one uppercase letter\n' +
+                '      Contain at least one lowercase letter\n' +
+                '      Contain at least one digit\n' );
+            // signUpButton.disabled = true;
+        } else {
+            passwordInput1.setCustomValidity('');
+            // signUpButton.disabled = false;
+        }
     }
 
     function validatePassword2() {
         const passwordValue1 = passwordInput1.value.trim();
         const passwordValue2 = passwordInput2.value.trim();
-        signUpButton.disabled = passwordValue1 !== passwordValue2;
+        if (passwordValue1 !== passwordValue2) {
+            passwordInput2.setCustomValidity('Passwords do not match.');
+            // signUpButton.disabled = true;
+        } else {
+            passwordInput2.setCustomValidity('');
+            // signUpButton.disabled = false;
+        }
     }
 
     emailInput.addEventListener('input', validateEmail);
