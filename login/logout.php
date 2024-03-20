@@ -2,7 +2,9 @@
 
 session_start();
 
-include "../functions/cancel_order.php";
+if ($_SESSION['role_id'] == 3) {
+    include "../functions/cancel_order.php";
+}
 
 unset($_SESSION['user_id']);
 unset($_SESSION['role_id']);
