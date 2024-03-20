@@ -16,7 +16,7 @@
         <div class="header-container">
             <div class="logo">
                  <!-- Logo goes here -->
-                 <a href="../view/restaurants.php"><img height="auto" width="60px" src="../assets/images/logo-transformed.png" alt="logo"></a>
+                 <a href="../index.php"><img height="auto" width="60px" src="../assets/images/logo-transformed.png" alt="logo"></a>
             </div>
 
              <ul id="menu">
