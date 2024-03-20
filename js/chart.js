@@ -9,8 +9,8 @@ const config = {
                 time: {
                     unit: 'hour'
                 },
-                min: new Date('2023-10-20T00:00:00'),
-                max: new Date('2025-10-20T00:00:00')
+                min: new Date('2024-01-01T00:00:00'),
+                max: new Date('2024-12-31T23:59:59')
             },
             y: {
                 beginAtZero: true
@@ -63,9 +63,43 @@ const myChart = new Chart(
 // render init block
 function dateFilter(time) {
     myChart.config.options.scales.x.time.unit = time;
+
+    // Set min and max values based on time unit
+    const currentDate = new Date();
+    let minDate, maxDate;
+
+    if (time === 'hour') {
+        minDate = new Date(currentDate);
+        minDate.setHours(currentDate.getHours() - 1);
+        maxDate = new Date(currentDate);
+    } else if (time === 'day') {
+        minDate = new Date(currentDate);
+        minDate.setDate(currentDate.getDate() - 1);
+        maxDate = new Date(currentDate);
+    } else if (time === 'week') {
+        minDate = new Date(currentDate);
+        minDate.setDate(currentDate.getDate() - 7);
+        maxDate = new Date(currentDate);
+    } else if (time === 'month') {
+        minDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, currentDate.getDate());
+        maxDate = new Date(currentDate);
+    } else if (time === 'year') {
+        minDate = new Date(currentDate.getFullYear() - 1, currentDate.getMonth(), currentDate.getDate());
+        maxDate = new Date(currentDate);
+    } else {// Default to the entire year
+        minDate = new Date(currentDate.getFullYear(), 0, 1);
+        maxDate = new Date(currentDate.getFullYear(), 11, 31, 23, 59, 59);
+    }
+
+    myChart.config.options.scales.x.min = minDate;
+    myChart.config.options.scales.x.max = maxDate;
+
     myChart.update();
 }
 
 // Instantly assign Chart.js version
 const chartVersion = document.getElementById('chartVersion');
 chartVersion.innerText = Chart.version;
+
+// default
+dateFilter('day');
