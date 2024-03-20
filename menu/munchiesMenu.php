@@ -34,12 +34,12 @@ $_SESSION['rest_url'] = '../menu/kfcMenu.php';
 
 
                 <ul id="menu">
-                    <li><a href="../view/restaurants.php">Restaurants</a></li>
-                    <li><a href="../view/cart.php"><i class="ri-shopping-cart-2-fill"></i> Cart</a> </li>
+                    <li><a href="../view/restaurants.php">RESTAURANTS</a></li>
+                    <li><a href="../view/cart.php"><i class="ri-shopping-cart-2-fill"></i> CART</a> </li>
                     <div class="dropdown">
                         <li><a href="#"><i class="ri-user-3-fill"></i> USER</a></li>
                         <div class="dropdown-content">
-                            <a href="../login/logout.php"><i class="ri-logout-box-fill"></i>Logout</a>
+                            <a href="../login/logout.php"><i class="ri-logout-box-fill"></i>LOGOUT</a>
                         </div>
                     </div>
                 </ul>

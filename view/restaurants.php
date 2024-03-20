@@ -20,7 +20,7 @@
             </div>
 
              <ul id="menu">
-                 <li><a href="../view/restaurants.php">Restaurants</a></li>
+                 <li><a href="../view/restaurants.php">RESTAURANTS</a></li>
                  <div class="dropdown">
                     <li><a href="#"><i class='fas'>&#xf406;</i> USER</a></li>
                         <div class="dropdown-content">
@@ -29,7 +29,7 @@
                             <a href="../login/logout.php">Logout</a>
                         </div>
                  </div>
-                 <li><a href="../view/cart.php"><i class="fa fa-shopping-cart"></i> Cart</a> </li>
+                 <li><a href="../view/cart.php"><i class="fa fa-shopping-cart"></i> CART </a> </li>
              </ul>
         </div>
     </nav>
