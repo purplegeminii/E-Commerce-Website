@@ -31,7 +31,7 @@ fetch('../actions/get_chart_data.php')
         // Use fetched data to populate the datasets
         config.data = {
             datasets: [{
-                label: '$',
+                label: 'sales ($)',
                 data: data,
 
                 backgroundColor: [
