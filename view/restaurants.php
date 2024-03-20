@@ -16,11 +16,11 @@
         <div class="header-container">
             <div class="logo">
                  <!-- Logo goes here -->
-                 <a href="../index.php"><img height="auto" width="60px" src="../assets/images/logo-transformed.png" alt="logo"></a>
+                 <a href="../view/restaurants.php"><img height="auto" width="60px" src="../assets/images/logo-transformed.png" alt="logo"></a>
             </div>
 
              <ul id="menu">
-                 <li><a href="../index.php">HOME</a></li>
+                 <li><a href="../view/restaurants.php">Restaurants</a></li>
                  <div class="dropdown">
                     <li><a href="#"><i class='fas'>&#xf406;</i> USER</a></li>
                         <div class="dropdown-content">
@@ -46,7 +46,7 @@
 
         <div>
             <div class="stat-box munchies">
-                <a href="../menu/kfcMenu.php">
+                <a href="../menu/munchiesMenu.php">
                     <img src="../assets/images/munchies-img.png" alt="logo">
                 </a>
             </div>

@@ -18,17 +18,35 @@ $_SESSION['rest_url'] = '../menu/kfcMenu.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KFC Menu</title>
     <link rel="stylesheet" href="../css/kfcMenu.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+
 </head>
 
 <body>
     <div class="header">
-        <h1 class="menu-title">KFC Menu</h1>
-        <div class="line"></div>
-        <ul class="navbar">
-            <li class="center"><a href ="../view/restaurants.php">Restaurants</a></li>
-            <li class="upper"><a href ="../view/cart.php">Cart</a></li>
-            <li class="forward"><a href ="../login/logout.php">Logout</a></li>
-        </ul>
+
+        <nav>
+            <div class="header-container">
+                <div class="logo">
+                    <!-- Logo goes here -->
+                    <img height="auto" width="60px" src="../assets/images/kfc-trans-logo.png" alt="logo">
+                    <h1 class="menu-title">KFC Menu</h1>
+                </div>
+
+
+                <ul id="menu">
+                    <li><a href="../view/restaurants.php">Restaurants</a></li>
+                    <li><a href="../view/cart.php"><i class="ri-shopping-cart-2-fill"></i> Cart</a> </li>
+                    <div class="dropdown">
+                        <li><a href="#"><i class="ri-user-3-fill"></i> USER</a></li>
+                        <div class="dropdown-content">
+                            <a href="../login/logout.php"><i class="ri-logout-box-fill"></i>Logout</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+
     </div>
 
     <div id="main" class="menu-container">
