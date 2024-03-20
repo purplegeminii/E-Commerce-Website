@@ -13,6 +13,11 @@ const config = {
                 max: new Date('2024-12-31T23:59:59')
             },
             y: {
+                ticks: {
+                    callback: function(value, index, values) {
+                        return '$' + value;
+                    }
+                },
                 beginAtZero: true
             }
         }
@@ -26,16 +31,11 @@ fetch('../actions/get_chart_data.php')
         // Use fetched data to populate the datasets
         config.data = {
             datasets: [{
-                label: 'Sales',
+                label: '$',
                 data: data,
+
                 backgroundColor: [
-                    'rgba(255, 26, 104, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(0, 0, 0, 0.2)'
+                    'rgba(255, 26, 104, 0.2)'
                 ],
                 borderColor: [
                     'rgba(255, 26, 104, 1)',
