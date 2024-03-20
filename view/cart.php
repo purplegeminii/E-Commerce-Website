@@ -10,24 +10,36 @@ include "../functions/get_total_price.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../css/cart.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="../images/Eats Elite Logo.jpg" alt="Eats Elite">
-            <h1>Eats Elite</h1>
+<div class="header">
 
-            <nav>
-                <ul>
-                    <li><a href="../index.php">Home</a></li>
-                    <li><a href="../menu/kfcMenu.php">Menu</a></li>
-                    <li><a href="../view/cart.php">Cart</a></li>
-                </ul>
-            </nav>
+    <nav>
+        <div class="header-container">
+            <div class="logo">
+                <!-- Logo goes here -->
+                <img height="60px" width="auto" src="../assets/images/logo-transformed.png" alt="logo">
+                <h1 class="menu-title">Cart</h1>
+            </div>
+
+
+            <ul id="menu">
+                <li><a href="../view/restaurants.php">Restaurants</a></li>
+                <li><a href="../view/cart.php"><i class="ri-shopping-cart-2-fill"></i> Cart</a> </li>
+                <div class="dropdown">
+                    <li><a href="#"><i class="ri-user-3-fill"></i> USER</a></li>
+                    <div class="dropdown-content">
+                        <a href="../login/logout.php"><i class="ri-logout-box-fill"></i>Logout</a>
+                    </div>
+                </div>
+            </ul>
         </div>
+    </nav>
+</div>
 
-    </header>
+
     <main>
         <section class="cart">
             <h2>Your Cart</h2><a href="../menu/kfcMenu.php">Continue shopping</a>
@@ -53,10 +65,13 @@ include "../functions/get_total_price.php";
                                     </a>
                                 </div>
                                 <p>Unit Price: $<?= $item['Item_Price'] ?></p>
+
+                                <a href="../actions/remove_from_cart.php?order_item_id=<?= $item['Order_Item_ID'] ?>">
+                                    <button class="remove-item">Remove</button>
+                                </a>
+
                             </div>
-                            <a href="../actions/remove_from_cart.php?order_item_id=<?= $item['Order_Item_ID'] ?>">
-                                <button class="remove-item">Remove</button>
-                            </a>
+
                         </div>
                     <?php endforeach; ?>
                 <?php } else {
@@ -79,7 +94,7 @@ include "../functions/get_total_price.php";
                             echo "<button class='checkout-button' disabled='disabled' style='background-color: gray'>Checkout</button>";
                         }
                     } else {
-                        echo "<p>Total Price: $0.00</p>";
+                        echo "<p><strong>Total Price:</strong> $0.00</p>";
                         echo "<p>Taxes and shipping calculated at checkout</p>";
                         echo "<button class='checkout-button' disabled='disabled' style='background-color: gray'>Checkout</button>";
                     }
